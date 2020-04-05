@@ -102,7 +102,7 @@ deploy:
   type: git
   repository: 
     github: git@github.com:TUFZ/TUFZ.github.io.git
-    coding: git@e.coding.net:itufz/TUFZ.git
+    coding: git@e.coding.net:itufz/TUFZ/TUFZ.git
   branch: master
 
 backup:
@@ -111,4 +111,4 @@ backup:
   message: Back up www.itufz.com
   repository:
     github: git@github.com:TUFZ/TUFZ.github.io.git,backup
-    coding: git@e.coding.net:itufz/TUFZ.git,backup
+    coding: git@e.coding.net:itufz/TUFZ/TUFZ.git,backup
