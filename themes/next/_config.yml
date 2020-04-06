@@ -52,14 +52,14 @@ language_switcher: false
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  #since: 2015
+  since: 2020
 
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
     name: fa fa-heart
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
     color: "#ff0000"
 
@@ -71,14 +71,14 @@ footer:
 
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
-    enable: false
-    icp:
+    enable: true
+    icp: 蜀ICP备20008071号-1
     # The digit in the num of gongan beian.
-    gongan_id:
+    gongan_id: 
     # The full num of gongan beian.
-    gongan_num:
+    gongan_num: 
     # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
-    gongan_icon_url:
+    gongan_icon_url: # /images/beian.png
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/share-your-work/licensing-types-examples
@@ -117,10 +117,10 @@ darkmode: true
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  #about: /about/ || fa fa-user
+  about: /about/ || fa fa-user
   #tags: /tags/ || fa fa-tags
   #categories: /categories/ || fa fa-th
-  archives: /archives/ || fa fa-archive
+  #archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -177,8 +177,8 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  GitHub: https://github.com/TUFZ || fab fa-github
+  E-Mail: mailto:admin@itufz.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -201,7 +201,10 @@ links_settings:
   layout: block
 
 links:
-  #Title: http://yoursite.com
+  TRHX: https://www.itrhx.com/
+  impressionyang: https://impressionyang.xyz/
+  Blue: https://coderblue.cn/
+
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -254,8 +257,9 @@ symbols_count_time:
   item_text_post: true
   item_text_total: false
 
+
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: false
+tag_icon: true
 
 # Reward (Donate)
 # Front-matter variable (unsupport animation).
@@ -366,9 +370,9 @@ codeblock:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -452,11 +456,11 @@ font:
 # ---------------------------------------------------------------
 
 # Disable Baidu transformation on mobile devices.
-disable_baidu_transformation: false
+disable_baidu_transformation: true
 
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
-index_with_subtitle: false
+index_with_subtitle: true
 
 # Automatically add external URL with Base64 encrypt & decrypt.
 exturl: false
@@ -610,7 +614,7 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
+  enable: true
   appid: U2vDKDPkQrznPYSPhkw6c4V3-gzGzoHsz
   appkey: 6Fn0FfJiLWDtQYYfOBbevrX2
   notify: false # Mail notifier
@@ -995,3 +999,6 @@ vendors:
 css: css
 js: js
 images: images
+
+# 音乐播放器
+background_music: //music.163.com/outchain/player?type=0&id=4924170567&auto=1&height=66

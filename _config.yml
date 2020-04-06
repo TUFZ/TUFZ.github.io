@@ -112,3 +112,9 @@ backup:
   repository:
     github: git@github.com:TUFZ/TUFZ.github.io.git,backup
     coding: git@e.coding.net:itufz/TUFZ.git,backup
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: false
