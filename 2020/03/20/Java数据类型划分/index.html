@@ -5,10 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-TUFZ.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-TUFZ.png">
   <meta http-equiv="Cache-Control" content="no-transform">
   <meta http-equiv="Cache-Control" content="no-siteapp">
 
@@ -16,6 +14,8 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -53,6 +53,15 @@
   
 
 
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?169fbcc0e04223980097d96c4d22e688";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -154,7 +163,7 @@
     <link itemprop="mainEntityOfPage" href="http://www.itufz.com/2020/03/20/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%92%E5%88%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="TUFZ">
       <meta itemprop="description" content="">
     </span>
@@ -194,6 +203,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
   <span class="post-meta-item">
     
@@ -390,14 +406,14 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-数据类型简介"><span class="nav-number">1.</span> <span class="nav-text">Java 数据类型简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整型"><span class="nav-number">2.</span> <span class="nav-text">整型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浮点型"><span class="nav-number">3.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符型"><span class="nav-number">4.</span> <span class="nav-text">字符型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#布尔型"><span class="nav-number">5.</span> <span class="nav-text">布尔型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#String-字符串"><span class="nav-number">6.</span> <span class="nav-text">String 字符串</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-数据类型简介"><span class="nav-text">Java 数据类型简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整型"><span class="nav-text">整型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浮点型"><span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符型"><span class="nav-text">字符型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#布尔型"><span class="nav-text">布尔型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#String-字符串"><span class="nav-text">String 字符串</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="TUFZ"
-      src="/uploads/avatar.png">
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">TUFZ</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -468,6 +484,7 @@
 
         
   <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">蜀ICP备20008071号-1 </a>
+      <img src="/images/beian.png" style="display: inline-block;">
   </div>
 
 <div class="copyright">
@@ -488,8 +505,31 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=https://s9.cnzz.com/z_stat.php%3Fid%3D1278709084%26show%3Dpic&web_id=https://s9.cnzz.com/z_stat.php%3Fid%3D1278709084%26show%3Dpic"></script>
+  </div>
 
 
 
