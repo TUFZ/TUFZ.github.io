@@ -22,28 +22,34 @@
     var CONFIG = {"hostname":"www.itufz.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="TUFZ&#39;s Blog">
-<meta property="og:url" content="http://www.itufz.com/page/2/index.html">
+  <meta name="description" content="在程序之中，很多情况下需要重复执行一些代码，方法（method）也称之为函数，需要注意的是，进行方法定义有一个前提：方法在主类中定义并且由主方法直接调用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 方法的定义及使用【Java 学习笔记 08】">
+<meta property="og:url" content="http://www.itufz.com/2020/03/23/20Mar23A/index.html">
 <meta property="og:site_name" content="TUFZ&#39;s Blog">
+<meta property="og:description" content="在程序之中，很多情况下需要重复执行一些代码，方法（method）也称之为函数，需要注意的是，进行方法定义有一个前提：方法在主类中定义并且由主方法直接调用">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-23T05:59:09.000Z">
+<meta property="article:modified_time" content="2020-04-07T06:05:29.244Z">
 <meta property="article:author" content="TUFZ">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://www.itufz.com/page/2/">
+<link rel="canonical" href="http://www.itufz.com/2020/03/23/20Mar23A/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>TUFZ's Blog - 静心守志</title>
+  <title>Java 方法的定义及使用【Java 学习笔记 08】 | TUFZ's Blog</title>
   
 
 
@@ -148,13 +154,14 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.itufz.com/2020/03/20/20Mar20B/">
+    <link itemprop="mainEntityOfPage" href="http://www.itufz.com/2020/03/23/20Mar23A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -166,10 +173,9 @@
       <meta itemprop="name" content="TUFZ's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/20/20Mar20B/" class="post-title-link" itemprop="url">搭建 Java 开发环境【Java 学习笔记 02】</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Java 方法的定义及使用【Java 学习笔记 08】
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -178,14 +184,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-03-20 09:45:13" itemprop="dateCreated datePublished" datetime="2020-03-20T09:45:13+08:00">2020-03-20</time>
+              <time title="创建时间：2020-03-23 13:59:09" itemprop="dateCreated datePublished" datetime="2020-03-23T13:59:09+08:00">2020-03-23</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 14:03:13" itemprop="dateModified" datetime="2020-04-07T14:03:13+08:00">2020-04-07</time>
+                <time title="修改时间：2020-04-07 14:05:29" itemprop="dateModified" datetime="2020-04-07T14:05:29+08:00">2020-04-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -198,6 +204,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
   <span class="post-meta-item">
     
@@ -206,8 +219,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/03/20/20Mar20B/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/20/20Mar20B/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/03/23/20Mar23A/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/23/20Mar23A/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -217,14 +230,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>347</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -236,148 +249,76 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Java 语言属于编译型和解释型语言的开发语言，如果要进行 Java 开发，一定要进行 JDK （Java 开发工具）的安装配置，JDK 可以实现 Java 语言的编译与解释</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/03/20/20Mar20B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+        <p>在程序之中，很多情况下需要重复执行一些代码，方法（method）也称之为函数，需要注意的是，进行方法定义有一个前提：方法在主类中定义并且由主方法直接调用</p>
+<a id="more"></a>
+
+<h1 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h1><p>方法的返回值可以使用 Java 中定义的数据类型（基本数据类型、引用数据类型），在方法之中可以进行返回数据的处理，如果要返回数据就是用 return 来描述，return 返回的数据类型与方法返回值的数据类型相同，如果不返回数据则该方法可以使用 void 进行声明</p>
+<p>关于方法名称与变量的定义命名要求：</p>
+<ul>
+<li>方法名称：第一个单词字母小写，而后每个单词的首字母大写</li>
+<li>变量名称：第一个单词字母小写，而后每个单词的首字母大写</li>
+</ul>
+<p>方法的定义可以方便使用者重复调用，所有的程序都是从主方法开始的，方法定义不要太长，应使单个方法容易理解</p>
+<p>在进行方法定义的时候，如果方法的返回值类型为 void，那么可以利用 return 来结束调用</p>
+<h1 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h1><p>当方法名称相同，参数的类型或者个数不同的时候就叫方法重载</p>
+<p>eg. 不同类型的数据进行加法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(sum(<span class="number">10</span>, <span class="number">10</span>));</span><br><span class="line">        System.out.println(sum(<span class="number">20.0</span>, <span class="number">10.1</span>));</span><br><span class="line">        System.out.println(sum(<span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x + y;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x + y + z;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">sum</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">double</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x + y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同一个方法名称可以根据调用时传递的不同参数的类型或个数实现不同方法体的调用，这就实现了方法重载的定义，方法的重载与方法的返回值类型没有任何关系，只与参数有关，但是实际开发中：只要是方法重载，建议保持其方法的返回值类型相同</p>
+<p>eg. <code>System.out.println();</code> 就是一个系统自带的方法重载，它可以接收不同数据类型的参数</p>
+<h1 id="方法递归调用"><a href="#方法递归调用" class="headerlink" title="方法递归调用"></a>方法递归调用</h1><p>方法的递归调用指的是一个方法自己调用自己，利用递归调用可以解决一些重复且麻烦的问题，在进行方法递归调用时，需要考虑如下问题：</p>
+<ul>
+<li>一定要设置方法递归调用的结束条件</li>
+<li>每一次调用的过程之中一定要修改传递的参数条件</li>
+</ul>
+<p>eg. 利用递归求 1 + 2 + 3 + … … + 1000</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(sum(<span class="number">1000</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> num + sum(num - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>递归可以简化代码调用，但是实际开发很少会出现递归，大部分情况下都只是考虑一些简单的处理逻辑，递归如果使用不当，则会造成内存溢出</p>
+<p>eg. 计算 1! + 2! + 3! + … … + 90!</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(sum(<span class="number">90</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fan(num) + sum(num -<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">fan</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> num * fan(num - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>实际上有一部分递归是可以通过循环来完成的，但是使用递归要比使用循环结构更清晰简洁</p>
+
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.itufz.com/2020/03/20/20Mar20A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="TUFZ">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TUFZ's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/20/20Mar20A/" class="post-title-link" itemprop="url">Java 语言简介【Java 学习笔记 01】</a>
-        </h2>
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+          </div>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-20 09:28:44" itemprop="dateCreated datePublished" datetime="2020-03-20T09:28:44+08:00">2020-03-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 14:03:56" itemprop="dateModified" datetime="2020-04-07T14:03:56+08:00">2020-04-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">Java 学习笔记</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/03/20/20Mar20A/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/20/20Mar20A/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Java 之所以可以得到持续的发展力以及良好的生态系统，这完全取决于 Java 自身的技术特征：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/03/20/20Mar20A/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/21/20Mar21A/" rel="prev" title="Java 程序逻辑控制【Java 学习笔记 07】">
+      <i class="fa fa-chevron-left"></i> Java 程序逻辑控制【Java 学习笔记 07】
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/24/20Mar24A/" rel="next" title="Java 类与对象【Java 学习笔记 09】">
+      Java 类与对象【Java 学习笔记 09】 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -424,6 +365,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法的定义"><span class="nav-text">方法的定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法重载"><span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法递归调用"><span class="nav-text">方法递归调用</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
