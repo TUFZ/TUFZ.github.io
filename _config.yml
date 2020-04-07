@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.itufz.com
+url: https://www.itufz.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -103,6 +103,7 @@ deploy:
   repository: 
     github: git@github.com:TUFZ/TUFZ.github.io.git
     coding: git@e.coding.net:itufz/TUFZ.git
+    gitee: https://gitee.com/TUFZ/TUFZ.git
   branch: master
 
 backup:
@@ -112,6 +113,7 @@ backup:
   repository:
     github: git@github.com:TUFZ/TUFZ.github.io.git,backup
     coding: git@e.coding.net:itufz/TUFZ.git,backup
+    gitee: https://gitee.com/TUFZ/TUFZ.git,backup
 
 symbols_count_time:
   symbols: true
