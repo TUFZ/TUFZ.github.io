@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itufz.com/"/>
-  <updated>2020-04-08T01:17:30.435Z</updated>
+  <updated>2020-04-08T04:37:06.442Z</updated>
   <id>https://www.itufz.com/</id>
   
   <author>
@@ -17,18 +17,20 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>20Apr08A</title>
+    <title>光栅图形学算法</title>
     <link href="https://www.itufz.com/2020/04/08/20Apr08A/"/>
     <id>https://www.itufz.com/2020/04/08/20Apr08A/</id>
     <published>2020-04-07T18:46:08.000Z</published>
-    <updated>2020-04-08T01:17:30.435Z</updated>
+    <updated>2020-04-08T04:37:06.442Z</updated>
     
     <summary type="html">
     
-      计算机图形学
+      光栅图形学算法大多数是计算机底层算法，包含了重要的图形学基本概念和思想
     
     </summary>
     
+    
+      <category term="计算机图形学" scheme="https://www.itufz.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
     
       <category term="计算机图形学" scheme="https://www.itufz.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>

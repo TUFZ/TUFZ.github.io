@@ -258,7 +258,6 @@
         </div>
         <p>这是我第二次使用 <code>GitHub + Hexo</code> 搭建个人博客，所以成功的搭建起来并没有花太多时间，但还是遇到了一些问题，所以在此记录一下这些“🕳”，以及记录我自己添加到博客的内容。</p>
 <a id="more"></a>
-
 <p>最近有一些小伙伴留言说希望了解我站点的部分配置，有这一需求的可以查看我在 GitHub 上的站点备份👉<a href="https://github.com/TUFZ/TUFZ.github.io/tree/backup" target="_blank" rel="noopener">传送门</a></p>
 <h1 id="必知概念"><a href="#必知概念" class="headerlink" title="必知概念"></a>必知概念</h1><ul>
 <li>站点根目录</li>
@@ -272,62 +271,50 @@
 <li>主题配置文件</li>
 </ul>
 <p>配置主题的文件，在主题文件夹里，例如我的主题配置文件：<code>F:\Blog\TUFZ\Hexo\themes\ayer\_config.yml</code></p>
-<h1 id="一些-“🕳”"><a href="#一些-“🕳”" class="headerlink" title="一些 “🕳”"></a>一些 “🕳”</h1><h2 id="bash-hexo-command-not-found"><a href="#bash-hexo-command-not-found" class="headerlink" title="bash: hexo: command not found"></a>bash: hexo: command not found</h2><p>首先检查一下 node.js 和 npm 是否正常，使用命令 <code>node -v</code> 和 <code>npm -v</code> 查看版本，如果有版本信息即一切正常，那么应该就是 Hexo 的环境变量没有添加，进入 Hexo –&gt; node_modules –&gt; .bin，复制 .bin 的文件路径，例如：<code>F:\Blog\TUFZ\Hexo\node_modules\.bin</code></p>
+<h1 id="一些-“🕳”"><a href="#一些-“🕳”" class="headerlink" title="一些 “🕳”"></a>一些 “🕳”</h1><h2 id="bash-hexo-command-not-found"><a href="#bash-hexo-command-not-found" class="headerlink" title="bash: hexo: command not found"></a>bash: hexo: command not found</h2><p>首先检查一下 node.js 和 npm 是否正常，使用命令 <code>node -v</code> 和 <code>npm -v</code> 查看版本，如果有版本信息即一切正常，那么应该就是 Hexo 的环境变量没有添加，进入 Hexo —&gt; node_modules —&gt; .bin，复制 .bin 的文件路径，例如：<code>F:\Blog\TUFZ\Hexo\node_modules\.bin</code></p>
 <p>将该路径添加到系统变量的 Path 变量里，重新使用 hexo 命令即可成功执行，如还不能成功执行，重新执行 Hexo 安装语句：<code>npm install hexo-cli -g</code></p>
 <h1 id="添加音乐"><a href="#添加音乐" class="headerlink" title="添加音乐"></a>添加音乐</h1><p>使用👉<a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">hexo-tag-aplayer</a>👈插件，最新版的 aplayer 支持 MetingJS，意味着它可以解析几乎所有网络平台的音乐资源，</p>
 <p><strong>安装</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-aplayer --save</span><br></pre></td></tr></table></figure>
-
 <p>安装好之后按理说就可以直接使用了，但是最好先配置一下 MetingJS，以免某些平台的音乐资源无法被解析，打开站点的配置文件，写入如下配置：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">    <span class="attr">meting:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="创建歌单页面"><a href="#创建歌单页面" class="headerlink" title="创建歌单页面"></a>创建歌单页面</h2><p>👉<a href="https://www.itufz.com/playlist/">这里</a>👈是我的歌单页面</p>
 <p><strong>1、首先我们新建一个 playlist</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page playlist</span><br></pre></td></tr></table></figure>
-
 <p><strong>2、配置 playlist</strong></p>
 <p>执行完新建页面命令之后，在 <code>Hexo\source</code> 文件夹下面会生成一个 playlist 文件夹，该文件夹里面有一个 index.md文件，这个 <code>.md</code> 文件会经过渲染解析生成 playlist 页面，所以我们所有关于页面的代码都在这里编写</p>
 <p><strong>注意：</strong>Markdown 真的很强大，可以在里面直接写前端代码</p>
 <p>以下是我的 index.md</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 音乐</span><br><span class="line">type: "playlist"</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">音乐的力量💪</span><br><span class="line"></span><br><span class="line">&#123;% meting "4924170567" "netease" "playlist" "theme:#FF4081" "mode:circulation" "mutex:true" "listmaxheight:340px" "preload:auto" %&#125;</span><br></pre></td></tr></table></figure>
-
 <p>以上 <code>4924170567</code> 是歌单的 id，随后 “netease” 表示音乐平台是网易云音乐，后面的可以默认或者查看官方说明进行修改</p>
 <p><strong>3、配置访问路径</strong></p>
 <p>至此我们的 playlist 页面已经准备好了，但是还没有访问入口，所以我们应该在主题配置文件里配置访问路径</p>
 <p>打开 <code>F:\Blog\TUFZ\Hexo\themes\ayer\_config.yml</code>，一般第一条配置就是 menu，先看一下我的配置：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 侧边栏菜单</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">主页:</span> <span class="string">/</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags</span></span><br><span class="line">  <span class="string">相册:</span> <span class="string">/photos</span></span><br><span class="line">  <span class="string">音乐:</span> <span class="string">/playlist</span></span><br><span class="line">  <span class="string">关于我:</span> <span class="string">/about</span></span><br></pre></td></tr></table></figure>
-
 <p>可以理解为 <code>/</code> 表示 <code>F:\Blog\TUFZ\Hexo\source</code> 文件夹，所以音乐的路径就是 <code>/playlist</code>，至此该页面已经完全配置完成</p>
 <h2 id="给文章添加音乐"><a href="#给文章添加音乐" class="headerlink" title="给文章添加音乐"></a>给文章添加音乐</h2><p>在文章中添加音乐只需要在文章中加入一段代码，示例：</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 示例文章</span><br><span class="line">date: 2020-03-25 09:34:11</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">    - </span>Blog</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&#123;% meting "3986040" "netease" "song" "theme:#555" "mutex:true" "listmaxheight:340px" "preload:auto" %&#125;</span><br><span class="line"></span><br><span class="line">这是我的演示文章，将上面的代码添加在哪个位置音乐就会出现在文章的哪个位置，上面的 <span class="code">`3986040`</span> 是歌曲的 id，"netease" 表示音乐资源来自于网易云音乐，后面的可以默认</span><br></pre></td></tr></table></figure>
-
 <p>aplayer 是支持给单篇文章添加音乐的，但是我在使用中却发现：当我给文章添加了音乐之后，文章的 TOC 就不能使用了</p>
 <p>该问题暂时未解决，该问题可能只在主题 ayer 上出现，其他主题未测试</p>
 <h2 id="音乐更新时间"><a href="#音乐更新时间" class="headerlink" title="音乐更新时间"></a>音乐更新时间</h2><p>我是使用网易云音乐歌单来实现音乐页面的歌曲更新的，每当网易云音乐歌单收藏里更新了音乐之后，一般 12 个小时之后博客才会更新</p>
 <h1 id="配置相册"><a href="#配置相册" class="headerlink" title="配置相册"></a>配置相册</h1><p>👉<a href="https://www.itufz.com/photos/">这里</a>👈是我的相册页面</p>
 <p>配置相册跟配置音乐页面的原理一样的，先新建一个相册页面，在根目录执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page photos</span><br></pre></td></tr></table></figure>
-
 <p>然后在 <code>Hexo\source</code> 下会生成一个 photos 文件夹，里面有一个 index.md 文件，文件配置如下：</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 相册</span><br><span class="line">type: "photos"</span><br><span class="line"></span><br><span class="line">albums: [</span><br><span class="line"><span class="code">		["https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/cover/cover1.jpg", "Cover1"],</span></span><br><span class="line"><span class="code">		["https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/cover/cover2.jpg", "Cover2"],</span></span><br><span class="line"><span class="code">		["https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/cover/cover8.png", "Cover8"]</span></span><br><span class="line">]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
 <p>albums 里存放的就是图片了，每一个 [] 前面的部分是图片的 URL，后面的部分是图片名称，当然你还可以编写一些代码来美化你的相册</p>
 <p>最后一步，给你的相册配置一个入口路径，我是配置在侧边栏的，所以打开主题配置文件，在 menu 中添加一条配置：<code>相册: /photos</code></p>
 <h1 id="设置文章置顶"><a href="#设置文章置顶" class="headerlink" title="设置文章置顶"></a>设置文章置顶</h1><p>使用👉<a href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener">hexo-generator-index-pin-top</a>👈插件</p>
 <p><strong>1、删除 hexo-generator-index 插件</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br></pre></td></tr></table></figure>
-
 <p><strong>2、安装 hexo-generator-index-pin-top 插件</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
-
 <p><strong>3、文章配置</strong></p>
 <p>在文章的 <code>Front-matter</code> 中添加 <code>top: true</code>，比如我的这篇文章：</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 记·博客搭建纪要</span><br><span class="line">date: 2020-03-24 18:05:51</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet"> - </span>Blog</span><br><span class="line">categories: 记录</span><br><span class="line">photos: https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/assets/20-03-24-1.jpeg</span><br><span class="line">top: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
 <p><strong>4、修改置顶图标样式</strong></p>
 <p>打开：<code>/Hexo/themes/next/layout/_macro</code> 目录下的 <code>post.swig</code> 文件，定位到 <code>&lt;div class=&quot;post-meta&quot;&gt;</code> 标签下，插入如下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">  &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">  &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">   &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
 <p>但是由于我的博客主题自带文章置顶功能，所以我完成前 3 步后我的文章就已经置顶且有一个挺不错的置顶标识了</p>
 <h1 id="配置后台管理（不推荐，已弃用）"><a href="#配置后台管理（不推荐，已弃用）" class="headerlink" title="配置后台管理（不推荐，已弃用）"></a>配置后台管理（不推荐，已弃用）</h1><blockquote>
 <p>使用了一段时间还是弃用了，hexo-admin 只能本地后台管理，并不实用，唯一让我眼前一亮的就是后台写文章有 Markdown 实时渲染，但是左右页面内容并不一致，会错位，体验就很差了，对了，还有一个点，在后台写文章可以直接添加图片，hexo-admin 会自动在 <code>Hexo/source</code> 下创建一个 <code>images</code> 文件夹存放添加的图片，然后使用相对路劲引用图片到文章，并不是利用图床，这样是方便了，但是也会导致网页打开需要加载的数据变得很大，拖慢页面加载速度</p>
@@ -336,10 +323,8 @@
 <p><strong>注意：hexo-admin 只能在本地进行后台管理</strong></p>
 <p><strong>1、安装插件</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-admin --save</span><br></pre></td></tr></table></figure>
-
 <p>然后我们本地部署看看：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -d</span><br></pre></td></tr></table></figure>
-
 <p>进入 <code>http://127.0.0.1:4000/admin/</code> 即可查看后台</p>
 <p><strong>2、设置账号密码</strong></p>
 <p>点击 <strong>Setting</strong></p>
@@ -359,11 +344,8 @@
 <p>复制里面的信息，打开站点配置文件 <code>_config.yml</code> 粘贴进去，至此配置已经完成</p>
 <p>然后重新部署以下博客</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -d</span><br></pre></td></tr></table></figure>
-
 <p>进入 <code>http://127.0.0.1:4000/admin/</code>，此时就需要我们输入之前设置的账号密码登陆</p>
 <blockquote>
 <p>害，当时就该遇到问题记录一下， 现在都不知道我遇到了什么问题，尴尬😅，未完… … 这个坑一定要填</p>
@@ -588,7 +570,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">27k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -663,6 +645,8 @@
 
 
 
+
+  
 
   
 

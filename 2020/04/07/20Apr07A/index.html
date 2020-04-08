@@ -256,7 +256,6 @@
 <li>绘制（渲染）技术</li>
 </ol>
 <a id="more"></a>
-
 <h1 id="基础概述"><a href="#基础概述" class="headerlink" title="基础概述"></a>基础概述</h1><p>渲染一幅三维图像所涉及的知识，实际上就是计算机图形中每个像素看上去应该是什么颜色的问题，这很大程度上取决于不同的光照模型</p>
 <p>计算机屏幕是由很多像素构成的，像素作为构成图形的基本单位，为了在屏幕上显示一幅图形，就必须研究在哪些像素上生成图形，就必须有一套针对光栅显示器生成图形的算法</p>
 <p>光栅显示器：</p>
@@ -265,12 +264,12 @@
 <li>图形应用数据结构</li>
 </ol>
 <p>实际上是对应一组图形数据文件，其中存放着欲生成的图形对象的全部描述信息</p>
-<ol start="2">
+<ol>
 <li>图形应用软件</li>
 </ol>
 <p>是解决某种应用问题的图形软件，是图形系统中的核心部分，包括了各种图形生成和处理技术，是图形技术在各种不同应用中的抽象</p>
 <p>eg. PhotoShop、3Dmax etc.</p>
-<ol start="3">
+<ol>
 <li>图形支撑软件</li>
 </ol>
 <p>大多数图形应用程序是建立在一定的图形支撑软件上的，图形支撑软件需要具有规范接口</p>
@@ -280,19 +279,19 @@
 </ol>
 <p>一种使用阴极射线管的显示器，阴极射线管主要由五部分组成，分别是：电子枪、偏转线圈、荫罩、荧光粉层和玻璃外壳，<strong>是曾经应用最广泛的显示器之一</strong></p>
 <p>CRT 显示器可以显示不同颜色的图形，彩色 CRT 显示器的荧光屏涂有三种荧光物质，分别能发出 红、绿、蓝 三种颜色的光，从而混合出不同颜色</p>
-<ol start="2">
+<ol>
 <li>LCD 显示器</li>
 </ol>
 <p>液晶显示器，工作原理是在显示器内部有很多液晶粒子，它们有规律的排列成一定的形状，并且它们每一面的颜色分别为：红、绿、蓝，当显示器接收到电脑的显示数据时，会控制每个液晶粒子转动到不同颜色的面，从而组合成不同的颜色和图像</p>
-<ol start="3">
+<ol>
 <li>LED 显示器</li>
 </ol>
 <p>发光二极管。是一种能将电能转化为光能的半导体电子元件，早期只能发出低光度的红光，现在能发出的光已经遍及可见光、红外线和紫外线</p>
-<ol start="4">
+<ol>
 <li>等离子显示器</li>
 </ol>
 <p>继 CRT 显示器、LCD 显示器之后的新一代显示器，厚度极薄、分辨率高，其成像原理是在显示屏上排列上千个密封的小低气压气体室，通过电流激发使其发出肉眼不可见的紫外线，然后紫外线碰击后面玻璃上的红、绿、蓝三种颜色的荧光体发出肉眼可见的光，以此成像</p>
-<ol start="5">
+<ol>
 <li>3D 显示器</li>
 </ol>
 <p>传统的 3D 电影在屏幕上有两组图像，观众需要戴上偏光镜以消除重影，形成视差，产生立体感</p>
@@ -312,7 +311,6 @@
 <p>计算显存的大小与其所支持的最大分辨率和色彩数的对应关系：</p>
 <p>eg. 显卡有 2MB 显存，当分辨率为 1024x768 时，可支持的色彩数？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2MB &#x3D; 2*1024*1024 &#x3D; 2097152 #字节</span><br><span class="line">1024x768 &#x3D; 786432 #像素</span><br></pre></td></tr></table></figure>
-
 <h1 id="分辨率的基础知识"><a href="#分辨率的基础知识" class="headerlink" title="分辨率的基础知识"></a>分辨率的基础知识</h1><p>屏幕分辨率：屏幕上显示的像素个数</p>
 <p>显示分辨率：计算机控制器所能提供的显示模式的分辨率</p>
 <ul>
@@ -351,13 +349,12 @@
 </ul>
 <p>点阵文件存储空间比矢量文件大</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#相互转换</span><br><span class="line"></span><br><span class="line">矢量文件 ---扫描转换---&gt;&gt;&gt; 点阵文件</span><br><span class="line">矢量文件 &lt;&lt;&lt;---图像处理--- 点阵文件</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+<ol>
 <li>缩放度</li>
 </ol>
 <p>位图与分辨率有关，即在一定面积的图像上包含固定数量的像素</p>
 <p>矢量图与分辨率无关，可以将其缩放到任意大小和以任意分辨率在输出设备上打印出来，都不会影响清晰度</p>
-<ol start="3">
+<ol>
 <li>存储格式</li>
 </ol>
 <p>位图：BMP、TIFF、GIF、JPEG、PNG</p>
@@ -585,7 +582,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">27k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -660,6 +657,8 @@
 
 
 
+
+  
 
   
 

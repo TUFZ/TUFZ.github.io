@@ -22,19 +22,25 @@
     var CONFIG = {"hostname":"www.itufz.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="计算机图形学">
+  <meta name="description" content="光栅图形学算法大多数是计算机底层算法，包含了重要的图形学基本概念和思想">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20Apr08A">
+<meta property="og:title" content="光栅图形学算法">
 <meta property="og:url" content="https://www.itufz.com/2020/04/08/20Apr08A/index.html">
 <meta property="og:site_name" content="TUFZ&#39;s Blog">
-<meta property="og:description" content="计算机图形学">
+<meta property="og:description" content="光栅图形学算法大多数是计算机底层算法，包含了重要的图形学基本概念和思想">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/00.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/01.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/02.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/03.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/04.png">
 <meta property="article:published_time" content="2020-04-07T18:46:08.000Z">
-<meta property="article:modified_time" content="2020-04-08T01:17:30.435Z">
+<meta property="article:modified_time" content="2020-04-08T04:37:06.442Z">
 <meta property="article:author" content="TUFZ">
 <meta property="article:tag" content="计算机图形学">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/00.png">
 
 <link rel="canonical" href="https://www.itufz.com/2020/04/08/20Apr08A/">
 
@@ -49,7 +55,7 @@
   };
 </script>
 
-  <title>20Apr08A | TUFZ's Blog</title>
+  <title>光栅图形学算法 | TUFZ's Blog</title>
   
 
 
@@ -175,7 +181,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          20Apr08A
+          光栅图形学算法
         </h1>
 
         <div class="post-meta">
@@ -188,7 +194,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-08 02:46:08 / 修改时间：09:17:30" itemprop="dateCreated datePublished" datetime="2020-04-08T02:46:08+08:00">2020-04-08</time>
+              <time title="创建时间：2020-04-08 02:46:08 / 修改时间：12:37:06" itemprop="dateCreated datePublished" datetime="2020-04-08T02:46:08+08:00">2020-04-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">计算机图形学</span></a>
+                </span>
             </span>
 
           
@@ -218,16 +233,16 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>12</span>
+              <span>2.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
-            <div class="post-description">计算机图形学</div>
+            <div class="post-description">光栅图形学算法大多数是计算机底层算法，包含了重要的图形学基本概念和思想</div>
 
         </div>
       </header>
@@ -238,7 +253,112 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="备份主题配置"><a href="#备份主题配置" class="headerlink" title="备份主题配置"></a>备份主题配置</h1><h1 id="置顶"><a href="#置顶" class="headerlink" title="置顶"></a>置顶</h1><h1 id="文章结尾"><a href="#文章结尾" class="headerlink" title="文章结尾"></a>文章结尾</h1>
+        <h1 id="直线段扫描转换算法"><a href="#直线段扫描转换算法" class="headerlink" title="直线段扫描转换算法"></a>直线段扫描转换算法</h1><p>数学里的直线上的点是无穷多的，但是光栅显示器的像素点是有限的，所以只能使用有限的像素去尽可能逼近直线</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/00.png" alt=""></p>
+<p>为了在光栅显示器上用这些离散的像素点去逼近直线，需要知道这些像素点的 $x$, $y$ 坐标</p>
+<p><strong>求法：</strong></p>
+<p>1. 求出过点 $P_{0}$, $P_{1}$ 的直线段的方程：</p>
+<script type="math/tex; mode=display">y = kx + b</script><script type="math/tex; mode=display">k=\frac{ \left ( y_{1} - y_{0}\right ) }{ \left ( x_{1} - x_{0}\right ) } \;\;\; \left ( x_{1} \neq x_{0}\right )</script><p>2. 求 $y$ 的值</p>
+<p>假设 $x$ 已知，即从 $x$ 的起点 $x_{0}$ 开始，沿着 $x$ 方向前进一个像素（步长 = 1），可以计算出相应的 $y$ 值</p>
+<p>因为像素的坐标是整数，所以 $y$ 值还需要进行取整处理</p>
+<p>取整规律：</p>
+<script type="math/tex; mode=display">P\left(1.7,\;0.8\right) \rightarrow \left(+0.5\right)  \rightarrow 取整 \rightarrow P\left(2,\;1\right)</script><p>直线是最基本的图形，一个动画或者真实感图形往往需要调用成千上万次画线程序，因此直线算法的好坏与效率将直接影响图形的质量和显示速度</p>
+<p>算法优化：把算法中的乘法消去可以减少计算量，从而提高算法效率</p>
+<p><strong>三个直线绘制常用算法：</strong></p>
+<ol>
+<li>数值微分法（DDA）</li>
+<li>中点画线法</li>
+<li>Bresenham 算法</li>
+</ol>
+<h2 id="1-数值微分法"><a href="#1-数值微分法" class="headerlink" title="1. 数值微分法"></a>1. 数值微分法</h2><blockquote>
+<p>引进了增量思想，算法直观、容易实现</p>
+</blockquote>
+<p><strong>原理解析：</strong></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/01.png" alt=""></p>
+<p>在上图中点 $\left(x_{i},\;y_{i}\right)$, $\left(x_{i+1},\;y_{i+1}\right)$ 可以表示为：</p>
+<script type="math/tex; mode=display">y_{i} = kx_{i} + b</script><script type="math/tex; mode=display">y_{i+1} = kx_{i+1} + b</script><p>因为存在假设：$x$ 已知，且每次前进步长为 1，所以：$x_{i+1} = x_{i} + 1$ </p>
+<p>则：</p>
+<script type="math/tex; mode=display">y_{i+1} = kx_{i+1} + b</script><script type="math/tex; mode=display">\;\;\;\;\;\;\;\;\;\;\;\;\; = k \left(x_{i} + 1\right) + b</script><script type="math/tex; mode=display">\;\;\;\;\;\;\;\;\;\;= kx_{i} + k + b</script><script type="math/tex; mode=display">\;\;\;\;\;\;\;\;\;\;= kx_{i} + b + k</script><script type="math/tex; mode=display">\;\;= y_{i} + k</script><p>即：当前的 $y$ 值等于前一步的 $y$ 值 + 斜率 $k$</p>
+<p>这里的斜率 $k$ 也就是式子 $y_{i+1} = y_{i} + k$ 的增量</p>
+<p>这样就把原来一个乘法和加法变成了一个加法</p>
+<p>eg. 用 DDA 扫描转换连接两点 $P_{0} \left(0,\;0\right)$ 和 $P_{1} \left(5,\;3\right)$ 的直线段</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/02.png" alt=""></p>
+<p>1. 计算 $k$</p>
+<script type="math/tex; mode=display">k = \frac{y_{1} - y_{0}}{x_{1} - x_{0}} = \frac{3 - 0}{5 - 0} = 0.6 < 1</script><p>2. 计算像素点坐标</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$x$</th>
+<th style="text-align:center">$y$</th>
+<th style="text-align:center">$int \left(y + 0.5\right)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$0$</td>
+</tr>
+<tr>
+<td style="text-align:center">$1$</td>
+<td style="text-align:center">$0+0.6$</td>
+<td style="text-align:center">$1$</td>
+</tr>
+<tr>
+<td style="text-align:center">$2$</td>
+<td style="text-align:center">$0.6+0.6$</td>
+<td style="text-align:center">$1$</td>
+</tr>
+<tr>
+<td style="text-align:center">$3$</td>
+<td style="text-align:center">$1.2+0.6$</td>
+<td style="text-align:center">$2$</td>
+</tr>
+<tr>
+<td style="text-align:center">$4$</td>
+<td style="text-align:center">$1.8+0.6$</td>
+<td style="text-align:center">$2$</td>
+</tr>
+<tr>
+<td style="text-align:center">$5$</td>
+<td style="text-align:center">$2.4+0.6$</td>
+<td style="text-align:center">$3$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/03.png" alt=""></p>
+<p><strong>注意：</strong></p>
+<p>当 $|k| &gt; 1$ 时</p>
+<p>使用上述计算方式可能不能画出直线，因为任意两点之间通过 DDA 算法计算直线，当 $|k| &gt; 1$ 时，结果只有三个点，如果两点之间距离比较远，就会导致光栅点太稀疏，从而不能描绘直线</p>
+<h2 id="2-中点画线法"><a href="#2-中点画线法" class="headerlink" title="2. 中点画线法"></a>2. 中点画线法</h2><p>对 DDA 的改进方案：</p>
+<p>1. 提高算法效率</p>
+<script type="math/tex; mode=display">y_{i+1} = y_{i} + k</script><p>因为在计算机中，加法运算是最快的，加法运算里整数加法又是最快的</p>
+<p>一般情况下，$y$ 和 $k$ 都是小数，而且每一步运算都要对 $y$ 进行四舍五入后取整，所以可以通过把浮点运算变成整数运算来改进</p>
+<p>2. 改变直线方程类型</p>
+<p>中点画线法：利用直线的一般式方程</p>
+<script type="math/tex; mode=display">F \left(x,\;y\right) = 0</script><script type="math/tex; mode=display">Ax + By + C = 0 \;\;\;\left(其中：A = - \left(\Delta y\right); \;\; B = \left(\Delta x\right); \;\; C = - B \left(\Delta x\right)\right)</script><p>这样一来，对于直线上的点：$F \left(x,\;y\right) = 0$</p>
+<p>对于直线上方的点：$F \left(x,\;y\right) &gt; 0$</p>
+<p>对于直线下方的点：$F \left(x,\;y\right) &lt; 0$</p>
+<p><strong>原理解析：</strong></p>
+<p>每一次在最大位移方向上走一步，而另一个方向走不走取决于中点误差项的判断</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/04.png" alt=""></p>
+<p>假设：$0 \leq |k| \leq 1$，所以每次在 $x$ 方向上 $+1$，$y$ 方向上的变化情况需要通过判断 $P_{u}$ 到 $P_{d}$ 的中点来决定</p>
+<p>如图，此时 <code>ideal line</code> 与直线 $P_{u}P_{d}$ 有一个交点 $Q$，直线 $P_{u}P_{d}$ 有一个中点：$M \left(x_{i}+1,\;y_{i}+0.5\right)$</p>
+<p>判断：</p>
+<p>当 $Q$ 在 $M$ 上方时，$P_{u}$ 距离直线更近，则 $P_{u}$ 为下一像素点</p>
+<p>当 $Q$ 在 $M$ 下方时，$P_{d}$ 距离直线更近，则 $P_{d}$ 为下一像素点</p>
+<p>若 $Q$ 和 $M$ 是同一个点，则 $P_{u}$ 或 $P_{d}$ 都可以是下一像素点</p>
+<p><strong>如何判断 $Q$ 在 $M$ 上方还是下方？</strong></p>
+<p>1. 把 $M$ 代入理想直线方程：</p>
+<script type="math/tex; mode=display">F \left(x_{m},\;y_{m}\right) = Ax_{m} + By_{m} + C</script><script type="math/tex; mode=display">令：d = F \left(x_{m},\;y_{m}\right) = F \left(x_{i} + 1,\;y_{i} + 0.5\right)</script><script type="math/tex; mode=display">\;\;= A \left(x_{i}+1\right) + B \left(y_{i} + 0.5\right) + C</script><p>2. 判断</p>
+<p>当 $d &lt; 0$ 时：$Q$ 在 $M$ 上方，下一像素点为 $P_{u}$</p>
+<p>当 $d &gt; 0$ 时：$Q$ 在 $M$ 下方，下一像素点为 $P_{d}$</p>
+<p>当 $d = 0$ 时：$Q$ 等于 $M$，下一像素点为 $P_{u}$ 或 $P_{d}$ 都可以</p>
+<p>算法：</p>
+<script type="math/tex; mode=display">y = \left\{\begin{matrix} y+1 & \left(d < 0\right) \\ y & \left(d \geq 0 \right) \end{matrix}\right.</script><p>算法计算量：为了求得 $d$ 值，需要 $4$ 个乘法，$2$ 个加法</p>
+
     </div>
 
     
@@ -325,7 +445,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#备份主题配置"><span class="nav-text">备份主题配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#置顶"><span class="nav-text">置顶</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章结尾"><span class="nav-text">文章结尾</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#直线段扫描转换算法"><span class="nav-text">直线段扫描转换算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-数值微分法"><span class="nav-text">1. 数值微分法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-中点画线法"><span class="nav-text">2. 中点画线法</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -456,7 +576,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">27k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -533,6 +653,61 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 

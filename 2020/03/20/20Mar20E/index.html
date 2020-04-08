@@ -254,7 +254,6 @@
       
         <p>程序是一套数字处理的游戏框架，在程序开发的过程之中，最终目的就是对一些数据进行处理，就必须提供各种类型的数据定义</p>
 <a id="more"></a>
-
 <h1 id="Java-数据类型简介"><a href="#Java-数据类型简介" class="headerlink" title="Java 数据类型简介"></a>Java 数据类型简介</h1><p>Java 中数据类型一共分为两类：</p>
 <ul>
 <li>基本数据类型：描述的是一些具体的数字单元<ul>
@@ -282,7 +281,6 @@
 <h1 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h1><p>整型数据一共有 4 种，按照保存范围由小到大：byte、short、int、long，在 Java 里面任何的一个整型常量其默认数据类型都是 int 型（只要是整数就是 int 型）</p>
 <p>eg. 定义 int 型变量</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// int 变量名 = 常量</span></span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">10</span>; <span class="comment">// 定义了一个整型变量的 a</span></span><br><span class="line">        a = <span class="number">20</span>; <span class="comment">// 改变已有变量的值</span></span><br><span class="line">        <span class="comment">// int 型变量 * int 型变量 = int 型数据</span></span><br><span class="line">        System.out.println(a * a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>变量是可以改变的，常量是不会变化的</p>
 <p>任何数据类型都有其可以保存的范围，正常使用下很少会出现超出范围的数据，如果超出最大的保存范围，将会出现循环的问题，在 Java 种这种现象叫数据溢出，解决数据溢出的办法：</p>
 <ul>
@@ -291,18 +289,15 @@
 </ul>
 <p>eg. 数据类型转换：int ➡ long</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2L</span> <span class="comment">// 追加字母 L</span></span><br><span class="line"><span class="number">2l</span> <span class="comment">// 同样的追加字母 l，但是一定避免使用小写字母 l</span></span><br><span class="line">(<span class="keyword">long</span>)<span class="number">2</span> <span class="comment">// 强制转换</span></span><br></pre></td></tr></table></figure>
-
 <p>数据类型之间是可以相互转换的，范围小的数据类型可以自动转为范围大的数据类型，但是范围大的数据类型转换成范围小的数据类型必须使用强制性的处理模式，并且同时还有可能发生数据溢出，所以不建议使用强制转换</p>
 <p>在进行整型处理的时候，byte 类型的范围是 -128 ~ 127 之间，它保存的数据量很小</p>
 <p>eg. 定义 byte 变量</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">byte</span> num = <span class="number">10</span>;</span><br><span class="line">        System.out.println(num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>在 Java 程序里面 20 应该是 int 型的数据，但是在为 byte 赋值的时候并没有因是 int 型就发生强制转换，这是因为 Java 对 byte 做了特殊处理，即：如果没超过 byte 范围的常量可以自动由 int 变为 byte，如果超过就必须强制转换</p>
 <p>对于常量，可以自动适配转换，对于变量则还是必须使用强制转换</p>
 <h1 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h1><p>浮点型数据描述的是小数，在 Java 里任意一个小数常量对应的类型为 double，建议以后描述小数都是用 double</p>
 <p>所有数据类型进行自动转型的时候都是由小类型向大类型转换，默认的小数类型为 double，但是也可以定义位数相对较少的 float 变量，这时 eg. <code>float = 11.1</code> 会报错，因为小数默认为 double，必须使用强制转换</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">11.1F</span></span><br><span class="line"><span class="number">11.1f</span></span><br><span class="line">(<span class="keyword">float</span>)<span class="number">11.1</span></span><br></pre></td></tr></table></figure>
-
 <p>整型是不包含小数点的，如果整型的计算结果有小数会自动省去</p>
 <h1 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h1><p>字符型使用 char 定义，使用 <code>&#39;&#39;</code> 括起来，在任何编程语言中，字符都可以与 int 相互转换，即字符所描述的内容可以通过 int 获取其内容对应的系统编码</p>
 <ul>
@@ -545,7 +540,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">27k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -620,6 +615,8 @@
 
 
 
+
+  
 
   
 

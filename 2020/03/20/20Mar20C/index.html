@@ -254,11 +254,9 @@
       
         <p>编写 Java 程序可以不使用特定编辑器，所有 Java 程序的后缀都是 <code>*.java</code>，我们可以建立一个目录保存所有的程序源代码</p>
 <a id="more"></a>
-
 <h1 id="Java-编程起步"><a href="#Java-编程起步" class="headerlink" title="Java 编程起步"></a>Java 编程起步</h1><p>定义第一个程序代码：</p>
 <p><code>Hello.java</code></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World !"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>Java 程序需要经过两次处理才可以正常执行：</p>
 <ul>
 <li>对源代码程序进行编译：<code>javac Hello.java</code>，编译之后会生成一个 <code>Hello.class</code> 的字节码文件，整个过程原理就是利用 JVM 编译出一套与操作平台无关的字节码文件（<code>*.class</code>）</li>
@@ -269,7 +267,6 @@
 <li>在 Java 程序开发中最基础的单元是类，所有的程序都必须封装在类当中执行，而类的基本定义语法如下：</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">public</span>] <span class="class"><span class="keyword">class</span> 类名称 </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-
 <p>在程序中定义的类名称是：<code>Hello</code>，类的定义有两种形式：</p>
 <ul>
 <li><code>public class 类名称 {}</code>：类名称必须与文件名称保持一致，在一个 <code>*.java</code> 文件里只能有一个 <code>public class</code> 定义</li>
@@ -280,14 +277,13 @@
 <li>在项目开发中，很少会出现在一个 <code>*.java</code> 源代码里面定义多个 <code>class</code> 类的情况，所以一般在一个 <code>*.java</code> 源代码里就定义一个 <code>public class</code> 类就够了</li>
 <li>Java 语言有着明确的要求，定义类名称的时候要求每一个单词的首字母必须大写，eg. HelloWorld、TestDemo 这样才符合标准</li>
 </ul>
-<ol start="2">
+<ol>
 <li>主方法：是所有程序执行的起点，并且一定要定义在类中，Java 的主方法定义：</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名称 </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 程序的代码由此开始执行</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><strong>注意：</strong> <code>String args[]</code> &lt;=&gt; <code>String [] args</code></p>
 <p>必须记住主方法怎么写，即使没有代码补全也能写出来，主方法所在的类统一称为 “主类”，所有的 “主类” 都使用 <code>public class 类名称 {}</code> 来定义</p>
-<ol start="3">
+<ol>
 <li>屏幕打印（系统输出）：可以直接在命令行方式下进行内容的显示，有如下两种语法：</li>
 </ol>
 <ul>
@@ -298,10 +294,8 @@
 <p>除了可以直接在 JShell 命令之中进行程序的编写之外，也可以将一些内容交给一些文件来进行保存</p>
 <p>eg. 在 <code>D:/hello.txt</code> 写入如下内容</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">system.out.println(&quot;hello&quot;);</span><br></pre></td></tr></table></figure>
-
 <p>在 JShell 执行指令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;open d:&#x2F;hello.txt</span><br></pre></td></tr></table></figure>
-
 <p>屏幕能够成功输出 <code>hello</code></p>
 <p>所以使用 JShell 只需要编写核心结构的代码即可，减少了对于结构化的需求，执行指令 <code>/exit</code> 即可退出 JShell 交互式界面</p>
 <h1 id="CLASSPATH-环境属性"><a href="#CLASSPATH-环境属性" class="headerlink" title="CLASSPATH 环境属性"></a>CLASSPATH 环境属性</h1><p>CLASSPATH 完整理解非常复杂，这里暂时了解其概念</p>
@@ -541,7 +535,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">27k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -616,6 +610,8 @@
 
 
 
+
+  
 
   
 
