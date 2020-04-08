@@ -5,7 +5,7 @@
 # Site
 title: TUFZ's Blog
 subtitle: '静心守志'
-description: ''
+description: 访问 tufz.gitee.io 速度更快！
 keywords:
 email: admin@itufz.com
 author: TUFZ
@@ -112,11 +112,26 @@ backup:
   message: Back up www.itufz.com
   repository:
     github: git@github.com:TUFZ/TUFZ.github.io.git,backup
-    coding: git@e.coding.net:itufz/TUFZ.git,backup
-    gitee: https://gitee.com/TUFZ/TUFZ.git,backup
 
 symbols_count_time:
   symbols: true
   time: true
   total_symbols: true
   total_time: false
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: " "
+  order_by: -date
+  icon: icon.png
+
+search:
+path: search.xml
+field: post
+format: html
+limit: 10000
