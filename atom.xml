@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itufz.com/"/>
-  <updated>2020-04-09T02:14:01.391Z</updated>
+  <updated>2020-04-09T02:57:31.894Z</updated>
   <id>https://www.itufz.com/</id>
   
   <author>
@@ -17,17 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>20Apr09A</title>
+    <title>【分享】阿里巴巴 Java 开发手册</title>
     <link href="https://www.itufz.com/2020/04/09/20Apr09A/"/>
     <id>https://www.itufz.com/2020/04/09/20Apr09A/</id>
     <published>2020-04-09T02:14:01.000Z</published>
-    <updated>2020-04-09T02:14:01.391Z</updated>
+    <updated>2020-04-09T02:57:31.894Z</updated>
     
     <summary type="html">
+    
+      码出高效，码出质量
     
     </summary>
     
     
+      <category term="学习资料" scheme="https://www.itufz.com/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/"/>
+    
+    
+      <category term="Java" scheme="https://www.itufz.com/tags/Java/"/>
+    
+      <category term="编码规范" scheme="https://www.itufz.com/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
     
   </entry>
   
