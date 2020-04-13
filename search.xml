@@ -1190,4 +1190,76 @@ $$d_{1} = F \left(x_{{m1}'},\;y_{{m1}'}\right)$$
         <tag>学习笔记</tag>
       </tags>
   </entry>
+  <entry>
+    <title>认识算法分析</title>
+    <url>/2020/04/13/20Apr13B/</url>
+    <content><![CDATA[<h1 id="什么是算法？"><a href="#什么是算法？" class="headerlink" title="什么是算法？"></a>什么是算法？</h1><p>一系列解决问题的清晰指令，能够对一定规范的输入，在有限的时间内获得要求的输出</p>
+<p>算法的特点：</p>
+<p>1. 指令清晰</p>
+<p>指令：计算机中的一行代码</p>
+<p>清晰：每一条指令不应该具有二义性，即计算机在接收到这条指令时，它的理解是唯一的</p>
+<p>2. 输入规范</p>
+<p>算法要有输入，且要确定该算法的输入范围</p>
+<p>3. 有限性</p>
+<p>算法运行的时间是有限的，只要算法能够终止，它的时间就是有限的</p>
+<p>4. 输出</p>
+<p>输出是任何一个算法必须的，如果一个算法没有输出，它就没有任何意义</p>
+<p>算法描述：同一个算法有不同的表达方式</p>
+<ol>
+<li>自然语言描述</li>
+<li>伪代码描述</li>
+</ol>
+<p>伪代码对照：</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/00.png" alt=""></p>
+<p>算法是问题的程序化解决方案，因此它遵循一定的流程</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/01.png" alt=""></p>
+<h1 id="算法分析？"><a href="#算法分析？" class="headerlink" title="算法分析？"></a>算法分析？</h1><p>算法分析就是要分析算法的时间效率和空间效率</p>
+<p>时间效率也就是时间复杂度，反映的是算法运行需要的时间长度</p>
+<p>空间效率也就是空间复杂度，反映的是算法运行需要的存储空间</p>
+<p>算法分析的核心是分析算法的时间效率</p>
+<p>输入规模越大的算法，其需要的计算时间就越长，同时也与算法实现的程序设计语言、编译器以及运行算法的硬件设备都有关系</p>
+<p>对于输入规模很大的算法，其运行时间通常由算法的操作中那些最耗时的操作来确定</p>
+<p>四则运算的算法中，通常乘除运算比加减运算耗时更多</p>
+<p>基本操作：用算法中最耗时的操作被执行的次数来度量算法的时间</p>
+<p>一个算法的运行时间主要与输入规模和基本操作有关</p>
+<p>eg.</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/02.png" alt=""></p>
+<p>算法的时间效率对于不同的输入是不同的</p>
+<h1 id="时间渐进"><a href="#时间渐进" class="headerlink" title="时间渐进"></a>时间渐进</h1><p>时间渐进符号：$O$、$\Omega$、$\Theta$</p>
+<p>时间效率的渐进表示：</p>
+<ul>
+<li>$O$</li>
+</ul>
+<p>对于足够大的 $n$，函数 $t(n)$ 的上界由 $g(n)$ 的常数倍来确定，即：$t(n) \leq c g(n)$，$c$ 为常数，记为：$t(n) \in O (g(n))$</p>
+<p>$t(n)$：算法基本操作执行次数的时间多项式，eg. $t(n) = 3n^{2} + 4n + 5$</p>
+<p>$g(n)$：常见的效率类型，eg. $log_{n}$、$n$、$nlog_{n}$</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/03.png" alt=""></p>
+<p>不管 $n$ 如何变化，算法时间多项式的曲线总是在函数 $g(n)$ 的常数倍之下</p>
+<p>说明函数 $g(n)$ 对应的效率类型是该算法的下界，即：在最坏情况下，该算法的时间效率为 $O (g(n))$</p>
+<ul>
+<li>$\Omega$</li>
+</ul>
+<p>对于足够大的 $n$，函数 $t(n)$ 的下界由 $g(n)$ 的常数倍来确定，即：$t(n) \geq c g(n)$，$c$ 为常数，记为：$t(n) \in \Omega (g(n))$</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/04.png" alt=""></p>
+<p>不管 $n$ 如何变化，算法时间多项式的曲线总是在函数 $g(n)$ 的常数倍之上</p>
+<p>说明函数 $g(n)$ 对应的效率类型是该算法的上界，即：在最优情况下，该算法的时间效率为 $\Omega (g(n))$</p>
+<ul>
+<li>$\Theta$</li>
+</ul>
+<p>对于足够大的 $n$，函数 $t(n)$ 的下界和下界由 $g(n)$ 的常数倍来确定，即：$c_{2} g(n) \leq t(n) \leq c_{1} g(n)$，$c_{2}$、$c_{1}$ 为常数，记为：$t(n) \in \Theta (g(n))$</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/05.png" alt=""></p>
+<p>不管 $n$ 如何变化，算法时间多项式的曲线总是在函数 $g(n)$ 的两个常数倍之间</p>
+<p>说明函数 $g(n)$ 对应的效率类型是该算法的上界和下界之间，即：在典型输入下，该算法的时间效率为 $\Theta (g(n))$</p>
+<p>eg. 算法 1 的时间多项式：$t_{1}(n) = 2n^{2} + 4n + 20$，算法 2 的时间多项式：$t_{2}(n) = 10nlog_{n} + 5n + 3$，问：哪一个算法的效率更高</p>
+<p>$\because t_{1}(n) \in \Omega (n^{2}),\;t_{2}(n) \in \Omega (nlog_{n})$</p>
+<p>$\therefore$ 算法 2 效率更高</p>
+]]></content>
+      <categories>
+        <category>算法分析</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>算法分析</tag>
+      </tags>
+  </entry>
 </search>
