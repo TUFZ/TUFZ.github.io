@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itufz.com/"/>
-  <updated>2020-04-13T12:51:02.054Z</updated>
+  <updated>2020-04-14T11:30:28.226Z</updated>
   <id>https://www.itufz.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Notice</title>
+    <link href="https://www.itufz.com/2020/04/14/notice/"/>
+    <id>https://www.itufz.com/2020/04/14/notice/</id>
+    <published>2020-04-14T11:21:19.000Z</published>
+    <updated>2020-04-14T11:30:28.226Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这是我的动态贴&lt;/p&gt;
+&lt;p&gt;本站已经支持 RSS
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>认识算法分析</title>
@@ -44,7 +68,7 @@
     <link href="https://www.itufz.com/2020/04/13/20Apr13A/"/>
     <id>https://www.itufz.com/2020/04/13/20Apr13A/</id>
     <published>2020-04-13T03:07:31.000Z</published>
-    <updated>2020-04-13T11:29:14.139Z</updated>
+    <updated>2020-04-13T15:55:05.505Z</updated>
     
     <summary type="html">
     
@@ -155,7 +179,7 @@
     <link href="https://www.itufz.com/2020/04/07/20Apr07A/"/>
     <id>https://www.itufz.com/2020/04/07/20Apr07A/</id>
     <published>2020-04-07T05:59:48.000Z</published>
-    <updated>2020-04-07T08:06:23.063Z</updated>
+    <updated>2020-04-08T13:48:28.846Z</updated>
     
     <summary type="html">
     
