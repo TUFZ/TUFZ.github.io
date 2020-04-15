@@ -1321,4 +1321,67 @@ $$d_{1} = F \left(x_{{m1}'},\;y_{{m1}'}\right)$$
 <p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/notice/01.gif" alt=""></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>区域填充算法</title>
+    <url>/2020/04/15/20Apr15A/</url>
+    <content><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><strong>区域：</strong> 👉已经表示成点阵形式的填充图形，是像素的集合</p>
+<p>区域填充是指将区域内的一点（通常称为种子点）赋予给定的颜色，然后将这种颜色扩展到整个区域内的过程</p>
+<p>区域可以采用<strong>内点</strong>表示和<strong>边界</strong>表示两种形式</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr15A/00.png" alt=""></p>
+<p><strong>内点表示：</strong> 枚举出区域内部的所有像素，内部的所有像素填充同一个颜色，边界像素填充与内部像素不同的颜色</p>
+<p><strong>边界表示：</strong> 枚举出边界上的所有像素，边界上的所有像素填充同一个颜色，内部像素填充与边界像素不同的颜色</p>
+<p>区域填充算法要求<strong>区域是连通</strong>的，因为只有在连通的区域中，才可能将种子点的颜色扩展到区域内的其他点</p>
+<p>区域又分为 4 向连通区域和 8 向连通区域</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr15A/01.png" alt=""></p>
+<ul>
+<li>4 向连通区域：从区域上一点出发，可以通过四个方向，即：👆、👇、👈、👉移动的组合，在不越出区域的前提下，到达区域内任意像素</li>
+<li>8 向连通区域：同理</li>
+</ul>
+<h1 id="简单-4-连通种子填充算法"><a href="#简单-4-连通种子填充算法" class="headerlink" title="简单 4 连通种子填充算法"></a>简单 4 连通种子填充算法</h1><blockquote>
+<p>又称：区域填充递归算法</p>
+</blockquote>
+<p>假设区域采用边界定义，即：区域边界上所有像素均具有某一特定值，区域内部所有像素均不采用这一特定值，而边界外的像素可以具有与边界相同的值</p>
+<p>使用<strong>栈结构</strong>来实现简单的种子填充算法</p>
+<blockquote>
+<p>队列：先进先出<br>栈：后进先出</p>
+</blockquote>
+<p><strong>算法原理：</strong></p>
+<p>种子像素入栈，当栈非空时，重复执行：</p>
+<ol>
+<li>栈顶像素出栈</li>
+<li>将出栈像素填充成要求的颜色</li>
+<li>按照👈、👆、👉、👇的顺序（顺序不是固定的）检查与栈像素相邻的四个像素，若其中某个像素不在边界且颜色不是要求的颜色，则将其入栈</li>
+</ol>
+<p><strong>不足之处：</strong></p>
+<ol>
+<li>有些像素会入栈多次，降低算法效率</li>
+<li>栈结构占空间</li>
+<li>递归执行，算法简单，但是效率不高</li>
+<li>区域内每一像素都要引进一次递归，进栈出栈，费时费内存</li>
+</ol>
+<p><strong>改进算法：</strong></p>
+<blockquote>
+<p>减少递归次数，提高效率</p>
+</blockquote>
+<p>可以采用区域填充的扫描线算法</p>
+<h1 id="结"><a href="#结" class="headerlink" title="结"></a>结</h1><p>多边形扫描转换：</p>
+<ul>
+<li>将多边形的顶点表示转化为点阵表示</li>
+<li>从多边形的边界（顶点）信息出发，利用多种形式的连贯性进行填充</li>
+</ul>
+<p>区域填充：</p>
+<ul>
+<li>只改变区域颜色，不改变区域表示方法</li>
+<li>要求给定区域内一点作为种子点，然后从种子点根据连通性将新的颜色扩散到整个区域</li>
+</ul>
+<p>区域填充的核心是要知道多边形的边界，得到内部的像素集，所以条件性更强</p>
+]]></content>
+      <categories>
+        <category>计算机图形学</category>
+      </categories>
+      <tags>
+        <tag>计算机图形学</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
 </search>

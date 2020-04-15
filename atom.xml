@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itufz.com/"/>
-  <updated>2020-04-14T16:35:17.978Z</updated>
+  <updated>2020-04-15T09:19:01.266Z</updated>
   <id>https://www.itufz.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>区域填充算法</title>
+    <link href="https://www.itufz.com/2020/04/15/20Apr15A/"/>
+    <id>https://www.itufz.com/2020/04/15/20Apr15A/</id>
+    <published>2020-04-15T08:35:07.000Z</published>
+    <updated>2020-04-15T09:19:01.266Z</updated>
+    
+    <summary type="html">
+    
+      光栅图形学算法——区域填充算法
+    
+    </summary>
+    
+    
+      <category term="计算机图形学" scheme="https://www.itufz.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    
+      <category term="计算机图形学" scheme="https://www.itufz.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+      <category term="学习笔记" scheme="https://www.itufz.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Notice</title>

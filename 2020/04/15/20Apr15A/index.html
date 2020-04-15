@@ -22,21 +22,24 @@
     var CONFIG = {"hostname":"www.itufz.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="注释是程序开发之中的一项重要组成技术，合理的注释能使项目维护更加方便">
+  <meta name="description" content="光栅图形学算法——区域填充算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 基本概念【Java 学习笔记 04】">
-<meta property="og:url" content="https://www.itufz.com/2020/03/20/20Mar20D/index.html">
+<meta property="og:title" content="区域填充算法">
+<meta property="og:url" content="https://www.itufz.com/2020/04/15/20Apr15A/index.html">
 <meta property="og:site_name" content="TUFZ&#39;s Blog">
-<meta property="og:description" content="注释是程序开发之中的一项重要组成技术，合理的注释能使项目维护更加方便">
+<meta property="og:description" content="光栅图形学算法——区域填充算法">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-20T06:15:55.000Z">
-<meta property="article:modified_time" content="2020-04-07T06:04:14.158Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr15A/00.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr15A/01.png">
+<meta property="article:published_time" content="2020-04-15T08:35:07.000Z">
+<meta property="article:modified_time" content="2020-04-15T09:19:01.266Z">
 <meta property="article:author" content="TUFZ">
+<meta property="article:tag" content="计算机图形学">
 <meta property="article:tag" content="学习笔记">
-<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr15A/00.png">
 
-<link rel="canonical" href="https://www.itufz.com/2020/03/20/20Mar20D/">
+<link rel="canonical" href="https://www.itufz.com/2020/04/15/20Apr15A/">
 
 
 <script id="page-configurations">
@@ -49,7 +52,7 @@
   };
 </script>
 
-  <title>Java 基本概念【Java 学习笔记 04】 | TUFZ's Blog</title>
+  <title>区域填充算法 | TUFZ's Blog</title>
   
 
 
@@ -162,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.itufz.com/2020/03/20/20Mar20D/">
+    <link itemprop="mainEntityOfPage" href="https://www.itufz.com/2020/04/15/20Apr15A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -175,7 +178,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Java 基本概念【Java 学习笔记 04】
+          区域填充算法
         </h1>
 
         <div class="post-meta">
@@ -186,23 +189,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-03-20 14:15:55" itemprop="dateCreated datePublished" datetime="2020-03-20T14:15:55+08:00">2020-03-20</time>
+              <time title="创建时间：2020-04-15 16:35:07 / 修改时间：17:19:01" itemprop="dateCreated datePublished" datetime="2020-04-15T16:35:07+08:00">2020-04-15</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 14:04:14" itemprop="dateModified" datetime="2020-04-07T14:04:14+08:00">2020-04-07</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">Java 学习笔记</span></a>
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">计算机图形学</span></a>
                 </span>
             </span>
 
@@ -222,8 +219,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/03/20/20Mar20D/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/20/20Mar20D/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/04/15/20Apr15A/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/15/20Apr15A/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -233,7 +230,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>896</span>
+              <span>806</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -242,6 +239,7 @@
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>1 分钟</span>
             </span>
+            <div class="post-description">光栅图形学算法——区域填充算法</div>
 
         </div>
       </header>
@@ -252,37 +250,57 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>注释是程序开发之中的一项重要组成技术，合理的注释能使项目维护更加方便</p>
-<a id="more"></a>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>在 Java 语言里面注释一共有三类：</p>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><strong>区域：</strong> 👉已经表示成点阵形式的填充图形，是像素的集合</p>
+<p>区域填充是指将区域内的一点（通常称为种子点）赋予给定的颜色，然后将这种颜色扩展到整个区域内的过程</p>
+<p>区域可以采用<strong>内点</strong>表示和<strong>边界</strong>表示两种形式</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr15A/00.png" alt=""></p>
+<p><strong>内点表示：</strong> 枚举出区域内部的所有像素，内部的所有像素填充同一个颜色，边界像素填充与内部像素不同的颜色</p>
+<p><strong>边界表示：</strong> 枚举出边界上的所有像素，边界上的所有像素填充同一个颜色，内部像素填充与边界像素不同的颜色</p>
+<p>区域填充算法要求<strong>区域是连通</strong>的，因为只有在连通的区域中，才可能将种子点的颜色扩展到区域内的其他点</p>
+<p>区域又分为 4 向连通区域和 8 向连通区域</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr15A/01.png" alt=""></p>
 <ul>
-<li>单行注释：// xxxxxx</li>
-<li>多行注释：/<em> xxxxx </em>/</li>
-<li>文档注释：/<em>* xxxxx </em>/，文档注释里面还需要很多的选项，一般建议共同开发工具控制</li>
+<li>4 向连通区域：从区域上一点出发，可以通过四个方向，即：👆、👇、👈、👉移动的组合，在不越出区域的前提下，到达区域内任意像素</li>
+<li>8 向连通区域：同理</li>
 </ul>
-<p>eg. 定义单行注释</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 单行注释：下面的语句是进行一行提示信息的输出</span></span><br><span class="line">        System.out.println(<span class="string">"Hello World !"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>eg. 定义多行注释</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        单行注释：</span></span><br><span class="line"><span class="comment">        下面的语句是进行一行提示信息的输出</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        System.out.println(<span class="string">"Hello World !"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果使用开发工具开发时，还是单行注释会比较方便，而对于一些重要的类和方法都建议使用文档注释</p>
-<h1 id="标识符与关键字"><a href="#标识符与关键字" class="headerlink" title="标识符与关键字"></a>标识符与关键字</h1><p>在任何程序之中，都是一个结构的整合体，在 Java 语言里面有不同的结构，eg. 类、方法、变量结构等，对于不同的结构一定要有不同的说明，对于结构的说明实际上就是标识符，是有命名要求的，但是一般都是要求有意义的单词所组成，同时对于标识符的组成在 Java 之中定义如下：</p>
+<h1 id="简单-4-连通种子填充算法"><a href="#简单-4-连通种子填充算法" class="headerlink" title="简单 4 连通种子填充算法"></a>简单 4 连通种子填充算法</h1><blockquote>
+<p>又称：区域填充递归算法</p>
+</blockquote>
+<p>假设区域采用边界定义，即：区域边界上所有像素均具有某一特定值，区域内部所有像素均不采用这一特定值，而边界外的像素可以具有与边界相同的值</p>
+<p>使用<strong>栈结构</strong>来实现简单的种子填充算法</p>
+<blockquote>
+<p>队列：先进先出<br>栈：后进先出</p>
+</blockquote>
+<p><strong>算法原理：</strong></p>
+<p>种子像素入栈，当栈非空时，重复执行：</p>
+<ol>
+<li>栈顶像素出栈</li>
+<li>将出栈像素填充成要求的颜色</li>
+<li>按照👈、👆、👉、👇的顺序（顺序不是固定的）检查与栈像素相邻的四个像素，若其中某个像素不在边界且颜色不是要求的颜色，则将其入栈</li>
+</ol>
+<p><strong>不足之处：</strong></p>
+<ol>
+<li>有些像素会入栈多次，降低算法效率</li>
+<li>栈结构占空间</li>
+<li>递归执行，算法简单，但是效率不高</li>
+<li>区域内每一像素都要引进一次递归，进栈出栈，费时费内存</li>
+</ol>
+<p><strong>改进算法：</strong></p>
+<blockquote>
+<p>减少递归次数，提高效率</p>
+</blockquote>
+<p>可以采用区域填充的扫描线算法</p>
+<h1 id="结"><a href="#结" class="headerlink" title="结"></a>结</h1><p>多边形扫描转换：</p>
 <ul>
-<li>由字母、数字、_、$ 所组成</li>
-<li>不能使用数字开头</li>
-<li>不能使用 Java 中的保留字（关键字）</li>
+<li>将多边形的顶点表示转化为点阵表示</li>
+<li>从多边形的边界（顶点）信息出发，利用多种形式的连贯性进行填充</li>
 </ul>
-<p>最简单的定义标识符的形式：使用英文开头，对于 $ 一般都有特殊的含义，不建议出现在自己所编写的代码之中</p>
-<p>关键字：系统对于一些结构的描述处理，有特殊的含义，eg. public、class 等，Java 中的关键字一共有如下内容：</p>
+<p>区域填充：</p>
 <ul>
-<li>不需要背，必要时可上网查</li>
+<li>只改变区域颜色，不改变区域表示方法</li>
+<li>要求给定区域内一点作为种子点，然后从种子点根据连通性将新的颜色扩散到整个区域</li>
 </ul>
-<p>对于关键字的定义不需要背，对于部分关键字有一些简短说明</p>
-<ul>
-<li>JDK 1.4 =》assert 关键字，用于异常处理</li>
-<li>JDK 1.5 =》enum 关键字，用于枚举定义</li>
-<li>未使用到的关键字：goto、const</li>
-<li>还有一些属于特殊含义的单词，严格来讲不算关键字：true、false、null</li>
-</ul>
+<p>区域填充的核心是要知道多边形的边界，得到内部的像素集，所以条件性更强</p>
 
     </div>
 
@@ -302,7 +320,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.itufz.com/2020/03/20/20Mar20D/" title="Java 基本概念【Java 学习笔记 04】">https://www.itufz.com/2020/03/20/20Mar20D/</a>
+    <a href="https://www.itufz.com/2020/04/15/20Apr15A/" title="区域填充算法">https://www.itufz.com/2020/04/15/20Apr15A/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -314,8 +332,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 计算机图形学</a>
               <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
-              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           </div>
 
         
@@ -324,13 +342,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/03/20/20Mar20C/" rel="prev" title="初识 Java 开发【Java 学习笔记 03】">
-      <i class="fa fa-chevron-left"></i> 初识 Java 开发【Java 学习笔记 03】
+    <a href="/2020/04/14/notice/" rel="prev" title="Notice">
+      <i class="fa fa-chevron-left"></i> Notice
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/03/20/20Mar20E/" rel="next" title="Java数据类型划分【Java 学习笔记 05】">
-      Java数据类型划分【Java 学习笔记 05】 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -390,7 +405,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标识符与关键字"><span class="nav-text">标识符与关键字</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单-4-连通种子填充算法"><span class="nav-text">简单 4 连通种子填充算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结"><span class="nav-text">结</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -594,6 +609,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
