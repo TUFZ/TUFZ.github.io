@@ -10,15 +10,18 @@ type: about
 
 > 静心守志
 
-- Email: admin@itufz.com
-- QQ: 1431482426
-- WeChat: EY-6769
+- Email: `admin@itufz.com`
+- WeChat: `TUFZ-00`
+
+如果你想和一群志同道合的小伙伴一起玩耍，扫码加入我们吧！
+
+![](https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/zsxq.png)
 
 朋友，觉得不错就留言加个友链吧！
 
 ### My Website
 
 - `TUFZ's Blog`
-- `https://www.itufz.com/`
-- `https://www.itufz.com/images/tufz.png`
+- `www.itufz.com/`
+- `www.itufz.com/images/tufz.png`
 - `描述请您随意🤝`

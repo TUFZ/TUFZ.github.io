@@ -87,8 +87,8 @@ footer:
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
   license: by-nc-sa
-  sidebar: true
-  post: false
+  sidebar: false
+  post: true
   language: zh-CN
 
 
@@ -179,7 +179,7 @@ site_state: true
 social:
   GitHub: https://github.com/TUFZ || fab fa-github
   E-Mail: mailto:admin@itufz.com || fa fa-envelope
-  RSS: /atom.xml || fa fa-rss
+  #RSS: /atom.xml || fa fa-rss
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
