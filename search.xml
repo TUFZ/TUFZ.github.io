@@ -17,6 +17,7 @@
 <p>对于直线、圆以及椭圆这些最基本元素的生成速度和显示质量的改进，在图形处理系统种具有重要的应用价值</p>
 </blockquote>
 <p>但是它们生成的线条具有明显的“锯齿形”，即：发生走样现象</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr16A/00.png" alt=""></p>
 ]]></content>
       <categories>
         <category>计算机图形学</category>
@@ -32,12 +33,12 @@
     <content><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><strong>区域：</strong> 👉已经表示成点阵形式的填充图形，是像素的集合</p>
 <p>区域填充是指将区域内的一点（通常称为种子点）赋予给定的颜色，然后将这种颜色扩展到整个区域内的过程</p>
 <p>区域可以采用<strong>内点</strong>表示和<strong>边界</strong>表示两种形式</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr15A/00.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr15A/00.png" alt=""></p>
 <p><strong>内点表示：</strong> 枚举出区域内部的所有像素，内部的所有像素填充同一个颜色，边界像素填充与内部像素不同的颜色</p>
 <p><strong>边界表示：</strong> 枚举出边界上的所有像素，边界上的所有像素填充同一个颜色，内部像素填充与边界像素不同的颜色</p>
 <p>区域填充算法要求<strong>区域是连通</strong>的，因为只有在连通的区域中，才可能将种子点的颜色扩展到区域内的其他点</p>
 <p>区域又分为 4 向连通区域和 8 向连通区域</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr15A/01.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr15A/01.png" alt=""></p>
 <ul>
 <li>4 向连通区域：从区域上一点出发，可以通过四个方向，即：👆、👇、👈、👉移动的组合，在不越出区域的前提下，到达区域内任意像素</li>
 <li>8 向连通区域：同理</li>
@@ -109,9 +110,9 @@
 <li>伪代码描述</li>
 </ol>
 <p>伪代码对照：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/00.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13B/00.png" alt=""></p>
 <p>算法是问题的程序化解决方案，因此它遵循一定的流程</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/01.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13B/01.png" alt=""></p>
 <h1 id="算法分析？"><a href="#算法分析？" class="headerlink" title="算法分析？"></a>算法分析？</h1><p>算法分析就是要分析算法的时间效率和空间效率</p>
 <p>时间效率也就是时间复杂度，反映的是算法运行需要的时间长度</p>
 <p>空间效率也就是空间复杂度，反映的是算法运行需要的存储空间</p>
@@ -122,7 +123,7 @@
 <p>基本操作：用算法中最耗时的操作被执行的次数来度量算法的时间</p>
 <p>一个算法的运行时间主要与输入规模和基本操作有关</p>
 <p>eg.</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/02.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13B/02.png" alt=""></p>
 <p>算法的时间效率对于不同的输入是不同的</p>
 <h1 id="时间渐进表示"><a href="#时间渐进表示" class="headerlink" title="时间渐进表示"></a>时间渐进表示</h1><p>时间渐进符号：$O$、$\Omega$、$\Theta$</p>
 <p>时间效率的渐进表示：</p>
@@ -132,21 +133,21 @@
 <p>对于足够大的 $n$，函数 $t(n)$ 的上界由 $g(n)$ 的常数倍来确定，即：$t(n) \leq c g(n)$，$c$ 为常数，记为：$t(n) \in O (g(n))$</p>
 <p>$t(n)$：算法基本操作执行次数的时间多项式，eg. $t(n) = 3n^{2} + 4n + 5$</p>
 <p>$g(n)$：常见的效率类型，eg. $log_{n}$、$n$、$nlog_{n}$</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/03.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13B/03.png" alt=""></p>
 <p>不管 $n$ 如何变化，算法时间多项式的曲线总是在函数 $g(n)$ 的常数倍之下</p>
 <p>说明函数 $g(n)$ 对应的效率类型是该算法的下界，即：在最坏情况下，该算法的时间效率为 $O (g(n))$</p>
 <ul>
 <li>$\Omega$</li>
 </ul>
 <p>对于足够大的 $n$，函数 $t(n)$ 的下界由 $g(n)$ 的常数倍来确定，即：$t(n) \geq c g(n)$，$c$ 为常数，记为：$t(n) \in \Omega (g(n))$</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/04.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13B/04.png" alt=""></p>
 <p>不管 $n$ 如何变化，算法时间多项式的曲线总是在函数 $g(n)$ 的常数倍之上</p>
 <p>说明函数 $g(n)$ 对应的效率类型是该算法的上界，即：在最优情况下，该算法的时间效率为 $\Omega (g(n))$</p>
 <ul>
 <li>$\Theta$</li>
 </ul>
 <p>对于足够大的 $n$，函数 $t(n)$ 的下界和下界由 $g(n)$ 的常数倍来确定，即：$c_{2} g(n) \leq t(n) \leq c_{1} g(n)$，$c_{2}$、$c_{1}$ 为常数，记为：$t(n) \in \Theta (g(n))$</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/05.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13B/05.png" alt=""></p>
 <p>不管 $n$ 如何变化，算法时间多项式的曲线总是在函数 $g(n)$ 的两个常数倍之间</p>
 <p>说明函数 $g(n)$ 对应的效率类型是该算法的上界和下界之间，即：在典型输入下，该算法的时间效率为 $\Theta (g(n))$</p>
 <p>eg. 算法 1 的时间多项式：$t_{1}(n) = 2n^{2} + 4n + 20$，算法 2 的时间多项式：$t_{2}(n) = 10nlog_{n} + 5n + 3$，问：哪一个算法的效率更高</p>
@@ -155,7 +156,7 @@
 <p><strong>定理：</strong></p>
 <p>如果：$t_{1}(n) \in O(g_{1}(n))$ 且 $t_{2}(n) \in O(g_{2}(n))$，则 $t_{1}(n) + t_{2}(n) \in O(max \left\{ g_{1}(n),\;g_{2}(n) \right\} )$</p>
 <p>算法的基本效率类型：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13B/06.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13B/06.png" alt=""></p>
 <p>如果算法的时间效率属于 $n^3$ 以上时，在输入规模 $n$ 逐渐增大的时候，这类算法的时间消耗增速很快，因此，要尽可能将设计算法的时间效率保证在 $n^3$ 以下</p>
 <h1 id="非递归算法效率分析"><a href="#非递归算法效率分析" class="headerlink" title="非递归算法效率分析"></a>非递归算法效率分析</h1><p>eg.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">算法 MaxElement(A[0,1,...,n-1])</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 求出给定数组中的最大元素</span><br><span class="line">&#x2F;&#x2F; 输入：实数数组 A[0,1,...,n-1]</span><br><span class="line">&#x2F;&#x2F; 输出：A 中的最大元素</span><br><span class="line"></span><br><span class="line">maxval ⬅ A[0]</span><br><span class="line">for i ⬅ 1 to n-1 do</span><br><span class="line">    if A[i] &gt; maxval</span><br><span class="line">        maxval ⬅ A[i]</span><br><span class="line">return maxval</span><br></pre></td></tr></table></figure>
@@ -220,12 +221,12 @@
 </ul>
 <p>用多边形的顶点序列来表示多边形，这种表示直观、几何意义强、占内存少，易于进行几何变换</p>
 <p>但是因为它没有明确指出哪些像素在多边形内，所以不能直接用于面着色</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting@v0.0.03/TUFZ-Img/article/20Apr13A/00.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting/TUFZ-Img/article/2020/04/20Apr13A/00.png" alt=""></p>
 <ul>
 <li><strong>点阵</strong>表示</li>
 </ul>
 <p>用位于多边形内部的像素集合来刻画多边形，这种表示丢失了许多几何信息（eg. 边界、顶点 etc.），但它却是光栅显示系统显示时所需的表示形式</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting@v0.0.03/TUFZ-Img/article/20Apr13A/01.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting/TUFZ-Img/article/2020/04/20Apr13A/01.png" alt=""></p>
 <p>把多边形的顶点表示转换为点阵表示，这种转换就称之为<strong>多边形的扫描转换</strong></p>
 <p>多边形分为：凸多边形、凹多边形、含内环的多边形 etc.</p>
 <ol>
@@ -265,7 +266,7 @@
 <p><strong>改进方案：</strong></p>
 <p>1. 在处理一条扫描线时，仅对与它相交的多边形的边（有效边）进行求交运算</p>
 <p>eg. 如图，只计算扫描线与 $P_{1}P_{4}$ 和 $P_{2}P_{3}$ 的交点</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13A/02.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13A/02.png" alt=""></p>
 <p>2. 考虑扫描线的连贯性</p>
 <p>即当前扫描线与各边的交点顺序与下一条扫描线与各边的交点顺序很可能相同或非常相似</p>
 <p>3. 多边形的连贯性</p>
@@ -295,18 +296,18 @@
 </table>
 </div>
 <p>随着扫描线的移动，扫描线与多边形的交点与上一次交点相关：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13A/03.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13A/03.png" alt=""></p>
 <p>设边的直线斜率为 $k$：</p>
 <script type="math/tex; mode=display">k = \frac{\Delta y}{\Delta x} = \frac{y_{i+1} - y_{i}}{x_{i+1} - x_{i}}</script><script type="math/tex; mode=display">\because y_{i+1} - y_{i} = 1</script><script type="math/tex; mode=display">\therefore x_{i+1} - x_{i} = \frac{1}{k}</script><script type="math/tex; mode=display">\Rightarrow x_{i+1} = x_{i} + \frac{1}{k}</script><p>这里的 $\frac{1}{k}$ 就是增量，即：$\Delta x = \frac{1}{k}$</p>
 <p>另外，需要知道一条边何时不再与下一条扫描线相交，以便及时把它从有效边表里删除出去，避免下一步进行无谓的计算</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13A/04.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13A/04.png" alt=""></p>
 <p>为了方便活性边表的建立与更新，需要构造一个新边表（NET），用来存放多边形的边的信息，有四个步骤：</p>
 <blockquote>
 <p>使用如图的多边形举例：</p>
 </blockquote>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13A/05.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13A/05.png" alt=""></p>
 <p>1. 构造一个纵向链表，链表的长度为多边形所占有的最大扫描线数，链表的每个节点，称为一个<strong>吊桶</strong>，对应多边形覆盖的每一条扫描线</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13A/06.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13A/06.png" alt=""></p>
 <p>2. NET 挂在与该边低端 y 值相同的扫描线桶中，即：存放在该扫描线第一次出现的边</p>
 <ul>
 <li>该边的 $y_{max}$</li>
@@ -331,7 +332,7 @@
 </tbody>
 </table>
 </div>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr13A/07.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr13A/07.png" alt=""></p>
 <p>通过上面的 NET 表就可以知道多边形是从哪里开始的：在这个表中只有 1、3、5、7 有边存在，而在 1 这条扫描线有两条边进入，所以就把这两条边放进活性边表进行处理</p>
 <p>每做一次新的扫描线时，需要对已有的边进行三个处理：</p>
 <ol>
@@ -384,7 +385,7 @@
 <p>分享连接👉<a href="https://www.jianguoyun.com/p/DaJUaZwQxamWCBiV_YsD" target="_blank" rel="noopener">传送门</a></p>
 <p><a href="https://edu.aliyun.com/certification/cldt02?spm=5176.8764728.aliyun-edu-course-header.11.5fc352bbywdkFm" target="_blank" rel="noopener">阿里巴巴 Java 编码规范认证</a></p>
 <p>阅读前请先了解部分专有名词解释：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr09A/00.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr09A/00.png" alt=""></p>
 ]]></content>
       <categories>
         <category>学习资料</category>
@@ -402,14 +403,14 @@
 </blockquote>
 <p>Hexo 使用 Nunjucks 渲染文章，被 <code>{{}}</code> 和 <code>{%%}</code> 括起来的内容将被解析，这可能会引发错误</p>
 <p>比如我使用 LaTeX 写一个字符 $A_{{c}'}$ ==&gt; <code>$A_{{c}'}$</code> 然后 <code>hexo g</code> 出现报错：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08B/00.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr08B/00.png" alt=""></p>
 <p>它提示我的第五行，也就是刚刚的字符出错了</p>
 <p><strong>如何解决：</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用 &#123;% raw %&#125; &#123;% endraw %&#125; 将你不希望使用 Nunjucks 解析的内容括起来</span><br><span class="line"></span><br><span class="line">注意：&#123;% raw %&#125; &#123;% endraw %&#125; 在代码块中不会被解析，也就起不了作用，但是代码块中的 &#123;&#123;&#125;&#125; 本身也是不会被解析的</span><br></pre></td></tr></table></figure>
 <p>eg.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">$A_&#123;&#123;c&#125;&#39;&#125;$</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
 <p>最后看看我这部分文字是怎么写的你可能就更清楚了</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08B/01.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr08B/01.png" alt=""></p>
 ]]></content>
       <categories>
         <category>博客纪要</category>
@@ -423,7 +424,7 @@
     <url>/2020/04/08/20Apr08A/</url>
     <content><![CDATA[<p>数学里的直线上的点是无穷多的，但是光栅显示器的像素点是有限的，所以只能使用有限的像素去尽可能逼近直线</p>
 <a id="more"></a>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/00.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr08A/00.png" alt=""></p>
 <p>为了在光栅显示器上用这些离散的像素点去逼近直线，需要知道这些像素点的 $x$, $y$ 坐标</p>
 <p><strong>求法：</strong></p>
 <p>1. 求出过点 $P_{0}$, $P_{1}$ 的直线段的方程：</p>
@@ -443,7 +444,7 @@
 <p>引进了增量思想，算法直观、容易实现</p>
 </blockquote>
 <p><strong>原理解析：</strong></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/01.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr08A/01.png" alt=""></p>
 <p>在上图中点 $\left(x_{i},\;y_{i}\right)$, $\left(x_{i+1},\;y_{i+1}\right)$ 可以表示为：</p>
 <script type="math/tex; mode=display">y_{i} = kx_{i} + b</script><script type="math/tex; mode=display">y_{i+1} = kx_{i+1} + b</script><p>因为存在假设：$x$ 已知，且每次前进步长为 1，所以：$x_{i+1} = x_{i} + 1$ </p>
 <p>则：</p>
@@ -451,7 +452,7 @@
 <p>这里的斜率 $k$ 也就是式子 $y_{i+1} = y_{i} + k$ 的增量</p>
 <p>这样就把原来一个乘法和加法变成了一个加法</p>
 <p>eg. 用 DDA 扫描转换连接两点 $P_{0} \left(0,\;0\right)$ 和 $P_{1} \left(5,\;3\right)$ 的直线段</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/02.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr08A/02.png" alt=""></p>
 <p>1. 计算 $k$</p>
 <script type="math/tex; mode=display">k = \frac{y_{1} - y_{0}}{x_{1} - x_{0}} = \frac{3 - 0}{5 - 0} = 0.6 < 1</script><p>2. 计算像素点坐标</p>
 <div class="table-container">
@@ -497,7 +498,7 @@
 </tbody>
 </table>
 </div>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/03.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr08A/03.png" alt=""></p>
 <p><strong>注意：</strong></p>
 <p>当 $|k| &gt; 1$ 时</p>
 <p>使用上述计算方式可能不能画出直线，因为任意两点之间通过 DDA 算法计算直线，当 $|k| &gt; 1$ 时，结果只有三个点，如果两点之间距离比较远，就会导致光栅点太稀疏，从而不能描绘直线</p>
@@ -512,7 +513,7 @@
 <p>对于直线下方的点：$F \left(x,\;y\right) &lt; 0$</p>
 <p><strong>原理解析：</strong></p>
 <p>每一次在最大位移方向上走一步，而另一个方向走不走取决于中点误差项的判断</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/04.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr08A/04.png" alt=""></p>
 <p>假设：$0 \leq |k| \leq 1$，所以每次在 $x$ 方向上 $+1$，$y$ 方向上的变化情况需要通过判断 $P_{u}$ 到 $P_{d}$ 的中点来决定</p>
 <p>如图，此时 <code>ideal line</code> 与直线 $P_{u}P_{d}$ 有一个交点 $Q$，直线 $P_{u}P_{d}$ 有一个中点：$M \left(x_{i}+1,\;y_{i}+0.5\right)$</p>
 <p>判断：</p>
@@ -533,7 +534,7 @@
 <script type="math/tex; mode=display">y = \left\{\begin{matrix} y+1 & \left(d < 0\right) \\ y & \left(d \geq 0 \right) \end{matrix}\right.</script><p>算法计算量：为了求得 $d$ 值，需要 $4$ 个乘法，$2$ 个加法</p>
 <p>对中点画线法的改进：因为 $d$ 是 $x$, $y$ 的线性函数，所以可以采用增量计算</p>
 <p><strong>推导过程：</strong></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/05.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr08A/05.png" alt=""></p>
 <p>代入中点坐标求得 $d_{0}$：</p>
 <script type="math/tex; mode=display">d_{0} = F \left(x_{m0},\;y_{m0}\right)</script><script type="math/tex; mode=display">\;\;\;\;\;\;\;\;\;\;\;\;\;\;= F \left(x_{i}+1,\;y_{i}+0.5\right)</script><script type="math/tex; mode=display">\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; = A \left(x_{i}+1\right) + B \left(y_{i}+0.5\right) + C</script><p><strong>假设 $d &lt; 0$</strong></p>
 <p>则第一个取的像素点 $P_{0}$ 为 $P_{u} \left(x_{i} + 1,\;y_{i} + 1\right)$</p>
@@ -562,7 +563,7 @@ $$d_{1} = F \left(x_{{m1}'},\;y_{{m1}'}\right)$$
 <p>此时中点画线法算法中只包含整数运算，所以更优于 DDA 算法</p>
 <h1 id="3-Bresenham-算法"><a href="#3-Bresenham-算法" class="headerlink" title="3. Bresenham 算法"></a>3. Bresenham 算法</h1><p>Bresenham 拥有更优的效率和更广泛的适用范围</p>
 <p><strong>基本思想：</strong></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr08A/06.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr08A/06.png" alt=""></p>
 <p>通过各行、各列像素中心构造一组虚拟网格线，按照直线起点到终点的顺序，计算直线与各垂直网格线的交点，然后根据误差项（交点距离像素点的距离）的符号确定该列像素中与此交点最近的像素</p>
 <p>假设每次 $x+1$，$y$ 的递增（减）量为 $0$ 或 $1$，它取决于实际直线与光栅网格点的距离，这个距离的最大误差是 $0.5$</p>
 <ul>
@@ -622,11 +623,11 @@ $$d_{1} = F \left(x_{{m1}'},\;y_{{m1}'}\right)$$
 <ul>
 <li>提升之前👇</li>
 </ul>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr07B/00.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr07B/00.png" alt=""></p>
 <ul>
 <li>提升之后👇</li>
 </ul>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr07B/01.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr07B/01.png" alt=""></p>
 <p>绿油油的真不错！✔</p>
 <h1 id="GitHub-Coding"><a href="#GitHub-Coding" class="headerlink" title="GitHub + Coding"></a>GitHub + Coding</h1><p>最开始我的网站只在 GitHub 托管，由于 GitHub 服务器在海外，从大天朝访问总是时断时续的，然后我看到了 <a href="https://www.itrhx.com" target="_blank" rel="noopener">TRHX</a> 的 Hexo 系列中讲如何实现 GitHub + Coding 双线部署的文章</p>
 <blockquote>
@@ -635,15 +636,15 @@ $$d_{1} = F \left(x_{{m1}'},\;y_{{m1}'}\right)$$
 <p>然后我就在 Coding 上也部署了我的博客，具体操作👉<a href="https://blog.csdn.net/qq_36759224/article/details/100879609" target="_blank" rel="noopener">传送门</a></p>
 <p>这里我只补充一点点，由于 Coding 被腾讯收购，后来的 Coding 就和腾讯云开发者平台合并了，所以不管你是从 <code>https://coding.net/</code> 还是 <code>https://dev.tencent.com/</code> 登陆注册都是一样的会进入 Coding</p>
 <p>还有就是关于仓库开启 Pages 服务，很多人找不到在哪部署静态网站，因为 Coding 新建仓库只默认开启如图的功能，其他功能开关需要自己打开</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting@v0.0.01/TUFZ-Img/article/20Apr07B/02.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting/TUFZ-Img/article/2020/04/20Apr07B/02.png" alt=""></p>
 <ul>
 <li>点击左下角<strong>项目设置</strong></li>
 <li>点击右侧<strong>功能开关</strong></li>
 <li>开启<strong>构建与部署</strong></li>
 </ul>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting@v0.0.01/TUFZ-Img/article/20Apr07B/03.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting/TUFZ-Img/article/2020/04/20Apr07B/03.png" alt=""></p>
 <p>然后回到你的仓库，在左侧构建与部署里点击静态网站，就可以开始部署 Pages 服务了</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting@v0.0.01/TUFZ-Img/article/20Apr07B/04.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting/TUFZ-Img/article/2020/04/20Apr07B/04.png" alt=""></p>
 <p>当我完成一顿操作之后，部署成功了，但是我的站点访问更慢了！！！🤢</p>
 <blockquote>
 <p>Tips：Coding 的服务器在新加坡</p>
@@ -651,22 +652,22 @@ $$d_{1} = F \left(x_{{m1}'},\;y_{{m1}'}\right)$$
 <h1 id="码云"><a href="#码云" class="headerlink" title="码云"></a>码云</h1><p>中文版 GitHub，服务器在国内，之前也在上面托管过代码，但是一直没想到它也有 Pages 服务</p>
 <p>以下是我在码云上部署站点的过程</p>
 <p>码云上即使你的仓库与用户名不同也可以开启 Pages 服务，但是如果不使用与用户名相同的仓库，部署 Pages 服务之后你的首页访问地址将带有二级目录，这会影响之后的域名解析</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr07B/05.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr07B/05.png" alt=""></p>
 <p>步骤：</p>
 <h2 id="1-创建一个与用户名同名的仓库"><a href="#1-创建一个与用户名同名的仓库" class="headerlink" title="1. 创建一个与用户名同名的仓库"></a>1. 创建一个与用户名同名的仓库</h2><p>略</p>
 <h2 id="2-复制仓库的-HTTPS-地址"><a href="#2-复制仓库的-HTTPS-地址" class="headerlink" title="2. 复制仓库的 HTTPS 地址"></a>2. 复制仓库的 HTTPS 地址</h2><p>当然使用 SSH 也是可以的，个人推荐码云可以使用 HTTPS，因为速度够快，使用也更方便</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr07B/06.png" alt=""></p>
-<h2 id="3-在站点目录里配置仓库地址"><a href="#3-在站点目录里配置仓库地址" class="headerlink" title="3. 在站点目录里配置仓库地址"></a>3. 在站点目录里配置仓库地址</h2><p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr07B/07.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr07B/06.png" alt=""></p>
+<h2 id="3-在站点目录里配置仓库地址"><a href="#3-在站点目录里配置仓库地址" class="headerlink" title="3. 在站点目录里配置仓库地址"></a>3. 在站点目录里配置仓库地址</h2><p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr07B/07.png" alt=""></p>
 <h2 id="4-推送站点代码"><a href="#4-推送站点代码" class="headerlink" title="4. 推送站点代码"></a>4. 推送站点代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 <p>当 Git 开始向码云推送代码时，系统会弹出窗口需要你输入你的码云用户名 + 密码，这就完成了本地与码云的连接</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr07B/11.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr07B/11.png" alt=""></p>
 <h2 id="5-开启-Pages-服务"><a href="#5-开启-Pages-服务" class="headerlink" title="5. 开启 Pages 服务"></a>5. 开启 Pages 服务</h2><p>点击仓库右上角<strong>服务</strong><br>点击<strong>Gitee Pages</strong></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr07B/08.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr07B/08.png" alt=""></p>
 <p>这里一切默认即可</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr07B/09.png" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr07B/09.png" alt=""></p>
 <h2 id="6-域名解析"><a href="#6-域名解析" class="headerlink" title="6. 域名解析"></a>6. 域名解析</h2><p>略</p>
 <h1 id="最后优化"><a href="#最后优化" class="headerlink" title="最后优化"></a>最后优化</h1><p>又是一顿操作下来，我已经将我的站点同时部署在 GitHub + Coding + Gitee 上了，然后测试发现国内绝大部分地区访问我的站点时解析的都是码云的 IP 地址，所以码云的访问速度完胜</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/20Apr07B/10.PNG" alt=""></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/2020/04/20Apr07B/10.PNG" alt=""></p>
 <p>最后我放弃了继续使用 Coding，而 GitHub 也只作为站点备份，所以我在控制台中停掉了 GitHub + Coding 的解析</p>
 ]]></content>
       <categories>
