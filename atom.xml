@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itufz.com/"/>
-  <updated>2020-04-16T08:11:36.599Z</updated>
+  <updated>2020-04-16T16:29:46.619Z</updated>
   <id>https://www.itufz.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20Apr17A</title>
+    <link href="https://www.itufz.com/2020/04/17/20Apr17A/"/>
+    <id>https://www.itufz.com/2020/04/17/20Apr17A/</id>
+    <published>2020-04-16T16:26:37.000Z</published>
+    <updated>2020-04-16T16:29:46.619Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;人类钟情于交往超过任何其他活动，这或许是本能赋予我们的。&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>反走样算法</title>
@@ -204,7 +228,7 @@
     <link href="https://www.itufz.com/2020/04/07/20Apr07B/"/>
     <id>https://www.itufz.com/2020/04/07/20Apr07B/</id>
     <published>2020-04-07T10:48:43.000Z</published>
-    <updated>2020-04-16T07:29:15.309Z</updated>
+    <updated>2020-04-16T12:19:38.642Z</updated>
     
     <summary type="html">
     
@@ -443,29 +467,6 @@
     <summary type="html">
     
       &lt;p&gt;编写 Java 程序可以不使用特定编辑器，所有 Java 程序的后缀都是 &lt;code&gt;*.java&lt;/code&gt;，我们可以建立一个目录保存所有的程序源代码&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Java 学习笔记" scheme="https://www.itufz.com/categories/Java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://www.itufz.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Java" scheme="https://www.itufz.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建 Java 开发环境【Java 学习笔记 02】</title>
-    <link href="https://www.itufz.com/2020/03/20/20Mar20B/"/>
-    <id>https://www.itufz.com/2020/03/20/20Mar20B/</id>
-    <published>2020-03-20T01:45:13.000Z</published>
-    <updated>2020-04-07T06:03:13.480Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Java 语言属于编译型和解释型语言的开发语言，如果要进行 Java 开发，一定要进行 JDK （Java 开发工具）的安装配置，JDK 可以实现 Java 语言的编译与解释&lt;/p&gt;
     
     </summary>
     
