@@ -1315,9 +1315,10 @@ $$d_{1} = F \left(x_{{m1}'},\;y_{{m1}'}\right)$$
   <entry>
     <title>Notice</title>
     <url>/2020/04/14/notice/</url>
-    <content><![CDATA[<p>这是我的动态贴 <a href="http://www.itufz.com/about/">关于我</a></p>
-<p>本站已经支持 RSS 订阅，地址：<code>http://www.itufz.com/atom.xml</code></p>
-<p>站点小绿🔒会及时修复的</p>
+    <content><![CDATA[<blockquote>
+<p>这是我的动态贴 <a href="http://www.itufz.com/about/">关于我</a><br>本站已经支持 RSS 订阅，地址：<code>http://www.itufz.com/atom.xml</code><br>站点小绿🔒会及时修复的</p>
+</blockquote>
+<p>PanDownload 凉了啊😭</p>
 <p><img data-src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/article/notice/01.gif" alt=""></p>
 ]]></content>
   </entry>
@@ -1375,6 +1376,22 @@ $$d_{1} = F \left(x_{{m1}'},\;y_{{m1}'}\right)$$
 <li>要求给定区域内一点作为种子点，然后从种子点根据连通性将新的颜色扩散到整个区域</li>
 </ul>
 <p>区域填充的核心是要知道多边形的边界，得到内部的像素集，所以条件性更强</p>
+]]></content>
+      <categories>
+        <category>计算机图形学</category>
+      </categories>
+      <tags>
+        <tag>计算机图形学</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>20Apr16A</title>
+    <url>/2020/04/16/20Apr16A/</url>
+    <content><![CDATA[<blockquote>
+<p>对于直线、圆以及椭圆这些最基本元素的生成速度和显示质量的改进，在图形处理系统种具有重要的应用价值</p>
+</blockquote>
+<p>但是它们生成的线条具有明显的“锯齿形”，即：发生走样现象</p>
 ]]></content>
       <categories>
         <category>计算机图形学</category>

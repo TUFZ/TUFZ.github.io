@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itufz.com/"/>
-  <updated>2020-04-15T09:19:01.266Z</updated>
+  <updated>2020-04-16T03:55:55.523Z</updated>
   <id>https://www.itufz.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20Apr16A</title>
+    <link href="https://www.itufz.com/2020/04/16/20Apr16A/"/>
+    <id>https://www.itufz.com/2020/04/16/20Apr16A/</id>
+    <published>2020-04-16T03:50:14.000Z</published>
+    <updated>2020-04-16T03:55:55.523Z</updated>
+    
+    <summary type="html">
+    
+      光栅图形学算法——反走样算法
+    
+    </summary>
+    
+    
+      <category term="计算机图形学" scheme="https://www.itufz.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    
+      <category term="计算机图形学" scheme="https://www.itufz.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+      <category term="学习笔记" scheme="https://www.itufz.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>区域填充算法</title>
@@ -44,7 +67,7 @@
     <link href="https://www.itufz.com/2020/04/14/notice/"/>
     <id>https://www.itufz.com/2020/04/14/notice/</id>
     <published>2020-04-14T11:21:19.000Z</published>
-    <updated>2020-04-14T16:35:17.978Z</updated>
+    <updated>2020-04-16T03:48:54.156Z</updated>
     
     <summary type="html">
     
@@ -52,8 +75,8 @@
       
         
         
-          &lt;p&gt;这是我的动态贴 &lt;a href=&quot;http://www.itufz.com/about/&quot;&gt;关于我&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;本站已经支持 RSS
+          &lt;blockquote&gt;
+&lt;p&gt;这是我的动态贴 &lt;a href=&quot;http://www.itufz.com/about/&quot;&gt;关于我&lt;/a&gt;&lt;br&gt;本站已经支持 RSS
         
       
     
@@ -443,29 +466,6 @@
     <summary type="html">
     
       &lt;p&gt;Java 语言属于编译型和解释型语言的开发语言，如果要进行 Java 开发，一定要进行 JDK （Java 开发工具）的安装配置，JDK 可以实现 Java 语言的编译与解释&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Java 学习笔记" scheme="https://www.itufz.com/categories/Java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://www.itufz.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Java" scheme="https://www.itufz.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 语言简介【Java 学习笔记 01】</title>
-    <link href="https://www.itufz.com/2020/03/20/20Mar20A/"/>
-    <id>https://www.itufz.com/2020/03/20/20Mar20A/</id>
-    <published>2020-03-20T01:28:44.000Z</published>
-    <updated>2020-04-07T06:03:56.785Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Java 之所以可以得到持续的发展力以及良好的生态系统，这完全取决于 Java 自身的技术特征：&lt;/p&gt;
     
     </summary>
     
