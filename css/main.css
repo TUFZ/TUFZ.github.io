@@ -1222,7 +1222,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #dbffbe;
+  background: #5e3bcf;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2624,23 +2624,14 @@ mjx-container + br {
   }
 }
 body {
-  background: url("/images/backGround.jpg");
-}
-.site-meta {
-  background: #f0d784;
-}
-.brand {
-  color: #2f9833;
-}
-.site-subtitle {
-  color: #47b54a;
+  background: url("https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/bg.png");
 }
 .footer {
-  color: #f0d784;
+  color: #fff;
 }
 .footer a {
-  color: #f0d784;
+  color: #fff;
 }
 .footer .with-love {
-  color: #f0d784;
+  color: #fff;
 }
