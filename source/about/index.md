@@ -4,7 +4,7 @@ date: 2020-04-06 20:55:06
 type: about
 ---
 
-<img src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/me.png" width="200px" height="200px"></img>
+<img src="https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/avatar.png" width="200px" height="200px"></img>
 
 # TUFZ
 
@@ -15,7 +15,7 @@ type: about
 
 如果你想和一群志同道合的小伙伴一起玩耍，扫码加入我们吧！
 
-![](https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/zsxq.png)
+![](https://cdn.jsdelivr.net/gh/TUFZ/ImgHosting//TUFZ-Img/about/zsxq.png)
 
 朋友，觉得不错就留言加个友链吧！
 

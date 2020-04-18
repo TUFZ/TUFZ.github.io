@@ -5,7 +5,7 @@
       <img src="{{ theme.footer.beian.gongan_icon_url }}" style="display: inline-block;">
     {%- endif %}
     {%- if theme.footer.beian.gongan_id and theme.footer.beian.gongan_num %}
-      {{- next_url('http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=' + theme.footer.beian.gongan_id, theme.footer.beian.gongan_num + ' ') }}
+      蜀公网安备{{- next_url('http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=' + theme.footer.beian.gongan_id, theme.footer.beian.gongan_num + '')}}号
     {%- endif %}
   </div>
 {%- endif %}
