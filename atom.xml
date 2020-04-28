@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itufz.com/"/>
-  <updated>2020-04-16T16:29:46.619Z</updated>
+  <updated>2020-04-28T07:36:40.458Z</updated>
   <id>https://www.itufz.com/</id>
   
   <author>
@@ -17,26 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>20Apr17A</title>
-    <link href="https://www.itufz.com/2020/04/17/20Apr17A/"/>
-    <id>https://www.itufz.com/2020/04/17/20Apr17A/</id>
-    <published>2020-04-16T16:26:37.000Z</published>
-    <updated>2020-04-16T16:29:46.619Z</updated>
+    <title>算法分析——蛮力法</title>
+    <link href="https://www.itufz.com/2020/04/28/20Apr28A/"/>
+    <id>https://www.itufz.com/2020/04/28/20Apr28A/</id>
+    <published>2020-04-28T06:26:04.000Z</published>
+    <updated>2020-04-28T07:36:40.458Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;人类钟情于交往超过任何其他活动，这或许是本能赋予我们的。&lt;/p&gt;
-
-        
-      
+      最直接最根本的算法
     
     </summary>
     
     
+      <category term="算法分析" scheme="https://www.itufz.com/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/"/>
+    
+    
+      <category term="学习笔记" scheme="https://www.itufz.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="算法分析" scheme="https://www.itufz.com/tags/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
