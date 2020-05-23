@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itufz.com/"/>
-  <updated>2020-04-29T08:05:14.718Z</updated>
+  <updated>2020-05-23T11:47:17.232Z</updated>
   <id>https://www.itufz.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Excel 公式应用与数据处理</title>
+    <link href="https://www.itufz.com/2020/05/23/20May23A/"/>
+    <id>https://www.itufz.com/2020/05/23/20May23A/</id>
+    <published>2020-05-23T11:31:23.000Z</published>
+    <updated>2020-05-23T11:47:17.232Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;仅记录部分知识点&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;table-container&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;符号&lt;/th&gt;
+&lt;th
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数据处理" scheme="https://www.itufz.com/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+      <category term="Excel" scheme="https://www.itufz.com/tags/Excel/"/>
+    
+  </entry>
   
   <entry>
     <title>减治法与排序</title>
@@ -113,7 +148,7 @@
     <link href="https://www.itufz.com/2020/04/14/notice/"/>
     <id>https://www.itufz.com/2020/04/14/notice/</id>
     <published>2020-04-14T11:21:19.000Z</published>
-    <updated>2020-05-04T13:21:40.473Z</updated>
+    <updated>2020-05-23T11:29:24.329Z</updated>
     
     <summary type="html">
     
@@ -449,29 +484,6 @@
     <summary type="html">
     
       &lt;p&gt;程序是一套数字处理的游戏框架，在程序开发的过程之中，最终目的就是对一些数据进行处理，就必须提供各种类型的数据定义&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Java 学习笔记" scheme="https://www.itufz.com/categories/Java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="学习笔记" scheme="https://www.itufz.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Java" scheme="https://www.itufz.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 基本概念【Java 学习笔记 04】</title>
-    <link href="https://www.itufz.com/2020/03/20/20Mar20D/"/>
-    <id>https://www.itufz.com/2020/03/20/20Mar20D/</id>
-    <published>2020-03-20T06:15:55.000Z</published>
-    <updated>2020-04-07T06:04:14.158Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;注释是程序开发之中的一项重要组成技术，合理的注释能使项目维护更加方便&lt;/p&gt;
     
     </summary>
     
